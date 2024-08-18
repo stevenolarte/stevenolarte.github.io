@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Stev Arte - Agencia de Publicidad, especializada en marketing digital y estrategias publicitarias innovadoras." />
+  <meta name="keywords" content="marketing, publicidad, agencia de publicidad, estrategias digitales, Stev Arte" />
+  <meta name="author" content="Stev Arte" />
+  <meta property="og:title" content="Stev Arte - Agencia de Publicidad" />
+  <meta property="og:description"
+    content="Descubre cómo Stev Arte puede transformar tu estrategia de marketing con soluciones creativas y efectivas." />
+  <meta property="og:image" content="imagenes/imagen-al-compartir-en-redes.jpg" />
+  <meta property="og:url" content="https://stevarte.com" />
+  <meta property="og:type" content="website" />
+
+  <title>Stev Arte - Agencia de Publicidad</title>
+
+  <!-- Preconexión para mejorar el rendimiento de fuentes -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <!-- Enlace a las fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Enlace a FontAwesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Enlace a la hoja de estilos principal -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="imagenes/favicon-stev-arte.jpg" type="image/png" />
+  <!-- Enlace a jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Enlace a Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="imagenes/LOGO-1.png" alt="Stev Arte" />
+      </a>
+    </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">
+      <i class="fas fa-bars"></i>
+    </label>
+    <section class="main-nav">
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#portfolio-section">Portafolio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="ofertas.html">PYMES</a></li>
+
+        </ul>
+      </nav>
+    </section>
+    <section class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=100089684202841" class="social-icon" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/stev_arte/" class="social-icon" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/message/BW2UDDVDHQ33J1" class="social-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </section>
+  </header>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <div class="logo-container">
+        <img src="imagenes/LOGO-1.png" alt="Logo de la empresa" class="logo">
+      </div>
+      <h2>Aprovecha nuestra Oferta Exclusiva para PYMES</h2>
+<p>
+  Impulsa tu negocio sin romper tu presupuesto. En Stev Arte, ofrecemos soluciones publicitarias y de inventarios 
+  diseñadas para ti. ¡Haz clic en el enlace PYMES en la parte superior de la página o pulsa el botón ver ofertas
+  para descubrir nuestras ofertas!
+</p>
+      <a href="ofertas.html" id="redirectBtn">Ver Ofertas</a>
+    </div>
+  </div>
+
+
+  <section id="banner">
+    <video autoplay muted loop>
+      <source src="Videos/Graficos 1.mp4" type="video/mp4" />
+      Tu navegador no soporta la reproducción de videos.
+    </video>
+  </section>
+
+  <section class="services-section" id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <p>
+      En Stev Arte, agencia de publicidad, ofrecemos una amplia gama de
+      servicios que incluyen diseño y desarrollo web personalizado, gestión de
+      contenido digital, así como servicios especializados en sublimación y
+      estampado. Nuestro enfoque está en crear soluciones integrales que
+      potencien la presencia digital de nuestros clientes, asegurando que sus
+      marcas se destaquen tanto en línea como fuera de ella.
+    </p>
+    <div class="services-container-wrapper">
+      <button class="services-button prev-button">&#10094;</button>
+      <div class="services-container">
+        <button class="service-item" data-target="#servicio1">
+          <video src="videos/diseñoWeb.mp4" muted loop></video>
+          <div class="overlay">
+            <div class="overlay-text">Diseño web empresarial</div>
+          </div>
+        </button>
+        <button class="service-item" data-target="#servicio2">
+          <video src="videos/diseñopublicitario.mp4" muted loop></video>
+          <div class="overlay">
+            <div class="overlay-text">Diseño publicitario</div>
+          </div>
+        </button>
+        <button class="service-item" data-target="#servicio3">
+          <video src="videos/manejoderedes.mp4" muted loop></video>
+          <div class="overlay">
+            <div class="overlay-text">Manejo De Redes Sociales</div>
+          </div>
+        </button>
+        <button id="serigrafia-link" class="service-item" onclick="location.href='sublimacion.html';">
+          <video src="videos/serigrafia y sublimacion.mp4" muted loop></video>
+          <div class="overlay">
+            <div class="overlay-text">Serigrafia y Sublimacion</div>
+          </div>
+        </button>
+        <button class="service-item" data-target="#servicio5">
+          <video src="videos/diseñografico.mp4" muted loop></video>
+          <div class="overlay">
+            <div class="overlay-text">Diseño Gráfico</div>
+          </div>
+        </button>
+        <button class="service-item" data-target="#servicio6">
+          <video src="videos/software-inventarios.mp4" muted loop></video>
+          <div class="overlay">
+            <div class="overlay-text">Software para empresas</div>
+          </div>
+        </button>
+      </div>
+      <button class="services-button next-button">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="servicio1" class="service-description">
+    <div class="service-description-text">
+      <h2>Diseño de página web para empresas</h2>
+      <p id="presentacion-del-servicio-dw">
+        En la era digital actual, el diseño web se ha convertido en un
+        elemento crucial para el éxito empresarial. Más que simplemente una
+        presencia en línea, un sitio web bien diseñado es la carta de
+        presentación de una empresa en el mundo virtual. Desde transmitir la
+        identidad de marca hasta proporcionar una experiencia de usuario
+        fluida, el diseño web eficaz es la clave para captar la atención de
+        los clientes, establecer la credibilidad y fomentar la confianza. En
+        un mercado altamente competitivo, donde la primera impresión puede
+        marcar la diferencia entre un cliente potencial que se convierte en
+        cliente habitual o se pierde en la vastedad del ciberespacio, invertir
+        en un diseño web de calidad es una estrategia empresarial inteligente
+        y esencial para alcanzar el éxito y la relevancia en el mercado
+        digital de hoy en día.
+      </p>
+    </div>
+    <div class="currency-selector">
+      <label for="currency">Selecciona tu divisa: </label>
+      <select id="currency">
+        <option value="cop">Peso Colombiano</option>
+        <option value="mxn">Peso Mexicano</option>
+        <option value="usd">Dólar</option>
+        <option value="eur">Euro</option>
+      </select>
+    </div>
+    <div id="carrusel-servicio1" class="carrusel">
+      <div class="carrusel-container">
+        <!-- Paquete Básico -->
+        <div class="carrusel-item servicio1-item">
+          <h2>Sitio web corporativo</h2>
+          <p>
+            Un sitio web corporativo es una plataforma diseñada para
+            representar a una empresa en línea, proporcionando información
+            clave sobre su misión, visión, productos o servicios. Es
+            fundamental para crear una presencia profesional y confiable en el
+            mercado.
+          </p>
+          <ul>
+            <h2>¿Que llevara tu página web?</h2>
+            <li>Página de Inicio</li>
+            <li>Acerca de Nosotros</li>
+            <li>Servicios</li>
+            <li>Noticias/Blog</li>
+            <li>Testimonios</li>
+            <li>Página de Contacto</li>
+            <li>Política de Privacidad y Términos de Servicio</li>
+            <li>Galería de Imágenes</li>
+          </ul>
+          <p class="price" data-price-cop="700000" data-price-mxn="3167,70" data-price-usd="175.20"
+            data-price-eur="161,40">
+            COP 700,000
+          </p>
+          <button class="contact-button" data-service="Sitio web corporativo" onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <!-- Paquete Estándar -->
+        <div class="carrusel-item servicio1-item">
+          <h2>Tienda en Línea <br />(E-commerce)</h2>
+          <p>
+            Un sitio de comercio electrónico facilita la venta de productos y
+            servicios en línea, permitiendo a los usuarios realizar compras
+            directamente desde la web.
+          </p>
+          <ul>
+            <h2>¿Que llevara tu página web?</h2>
+            <li>Página de Inicio</li>
+            <li>Catálogo de Productos</li>
+            <li>Página de Producto</li>
+            <li>Carrito de Compras</li>
+            <li>Proceso de Pago</li>
+            <li>Cuenta de Usuario</li>
+            <li>Política de Envíos y Devoluciones</li>
+            <li>Opiniones de Productos</li>
+          </ul>
+          <p class="price" data-price-cop="2500000" data-price-mxn="13500" data-price-usd="700" data-price-eur="600">
+            COP 2,500,000
+          </p>
+          <button class="contact-button" data-service="Tienda en Línea" onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <!-- Paquete Premium -->
+        <div class="carrusel-item servicio1-item">
+          <h2>Blog en Linea</h2>
+          <p>
+            Un blog es una plataforma de publicación de contenido que permite
+            a los usuarios compartir artículos, opiniones y actualizaciones
+            sobre temas específicos.
+          </p>
+          <ul>
+            <h2>¿Que llevara tu página web?</h2>
+            <li>Página de Inicio</li>
+            <li>Categorías</li>
+            <li>Páginas de Artículos</li>
+            <li>Comentarios</li>
+            <li>Formulario de Suscripción</li>
+            <li>Sobre el Autor</li>
+            <li>Archivos(acceso a publicaciones antiguas)</li>
+            <li>Compartir en Redes Sociales</li>
+          </ul>
+          <p class="price" data-price-cop="500000" data-price-mxn="2265,91" data-price-usd="125,16"
+            data-price-eur="115,29">
+            COP 500,000
+          </p>
+          <button class="contact-button" data-service="Blog en Linea" onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <!-- Agregar más tipos de sitios web aquí -->
+        <div class="carrusel-item servicio1-item">
+          <h2>Sitio Web de Portafolio</h2>
+          <p>
+            Un sitio web de portafolio es ideal para profesionales creativos
+            como diseñadores, fotógrafos o artistas que desean mostrar su
+            trabajo de manera visualmente impactante.
+          </p>
+          <ul>
+            <h2>¿Que llevara tu página web?</h2>
+            <li>Página de Inicio</li>
+            <li>Galería de Proyectos</li>
+            <li>Detalles del Proyecto</li>
+            <li>Acerca de nosotros</li>
+            <li>Testimonios</li>
+            <li>Servicios Ofrecidos</li>
+            <li>Formulario de Contacto</li>
+            <li>Blog</li>
+          </ul>
+          <p class="price" data-price-cop="600000" data-price-mxn="2719,09" data-price-usd="149,77"
+            data-price-eur="138,00">
+            COP 600,000
+          </p>
+          <button class="contact-button" data-service="Sitio Web de Portafolio" onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <div class="carrusel-item servicio1-item">
+          <h2>Sitio Web de Servicios</h2>
+          <p>
+            Un sitio web de servicios está diseñado para empresas que ofrecen
+            servicios en lugar de productos físicos, como consultorías,
+            agencias de marketing o empresas de diseño.
+          </p>
+          <ul>
+            <h2>¿Que llevara tu página web?</h2>
+            <li>Página de Inicio</li>
+            <li>Servicios Detallados</li>
+            <li>Estudios de Casos de Exito</li>
+            <li>Testimonios</li>
+            <li>Formulario de Consulta</li>
+            <li>Blog</li>
+            <li>Acerca de Nosotros</li>
+            <li>Página de Contacto</li>
+          </ul>
+          <p class="price" data-price-cop="3000000" data-price-mxn="16500" data-price-usd="800" data-price-eur="700">
+            COP 3,000,000
+          </p>
+          <button class="contact-button" data-service="Sitio Web de Servicios" onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <div class="carrusel-item servicio1-item">
+          <h2>Sitio Web Educativo</h2>
+          <p>
+            Un sitio web educativo está diseñado para instituciones
+            académicas, cursos en línea o plataformas de aprendizaje.
+          </p>
+          <ul>
+            <h2>¿Que llevara tu página web?</h2>
+            <li>Página de Inicio</li>
+            <li>Listado de Cursos</li>
+            <li>Página de Curso</li>
+            <li>Inscripción en Línea</li>
+            <li>Recursos</li>
+            <li>Foros o Grupos de Discusión</li>
+            <li>Blog Educativo</li>
+            <li>Página de Contacto</li>
+          </ul>
+          <p class="price" data-price-cop="4800000" data-price-mxn="21787,26" data-price-usd="1201,60"
+            data-price-eur="1106,94">
+            COP 4,800,000
+          </p>
+          <button class="contact-button" data-service="Sitio Web Educativo" onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <div class="carrusel-item servicio1-item">
+          <h2>Sitio Web de Eventos</h2>
+          <p>
+            Un sitio web de eventos es ideal para promocionar eventos como
+            conferencias, bodas, o conciertos. Ofrecemos un diseño atractivo
+          </p>
+          <ul>
+            <h2>¿Que llevara tu página web?</h2>
+            <li>Página de Inicio</li>
+            <li>Detalles del Evento</li>
+            <li>Registro en Línea</li>
+            <li>Agenda</li>
+            <li>Ponentes o artistas</li>
+            <li>Galería de Fotos</li>
+            <li>Preguntas Frecuentes</li>
+            <li>Página de Contacto</li>
+          </ul>
+          <p class="price" data-price-cop="3000000" data-price-mxn="13632,17" data-price-usd="750,81"
+            data-price-eur="691,84">
+            COP 3,000,000
+          </p>
+          <button class="contact-button" data-service="Sitio Web de Eventos" onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <div class="carrusel-item servicio1-item">
+          <h2>Sitio Web de Asociación u Organización</h2>
+          <p>
+            Un sitio web de asociación u organización sirve para grupos sin
+            fines de lucro o asociaciones que desean promover sus causas y
+            actividades.
+          </p>
+          <ul>
+            <h2>¿Que llevara tu página web?</h2>
+            <li>Página de Inicio</li>
+            <li>Acerca de Nosotros</li>
+            <li>Proyectos y Causas</li>
+            <li>Formas de Participar</li>
+            <li>Noticias y Actualizaciones</li>
+            <li>Blog</li>
+            <li>Formulario de Contacto</li>
+            <li>Galería de Imágenes</li>
+          </ul>
+          <p class="price" data-price-cop="2000000" data-price-mxn="9077,54" data-price-usd="500,54"
+            data-price-eur="461,21">
+            COP 2,000,000
+          </p>
+          <button class="contact-button" data-service="Sitio Web de Asociación u Organización"
+            onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <div class="carrusel-item servicio1-item">
+          <h2>Sitio Web Personal</h2>
+          <p>
+            Un sitio web personal es una plataforma para individuos que desean
+            compartir información sobre sí mismos, sus intereses o proyectos.
+          </p>
+          <ul>
+            <h2>¿Que llevara tu página web?</h2>
+            <li>Página de Inicio</li>
+            <li>Biografía</li>
+            <li>Proyectos o Trabajos</li>
+            <li>Blog Personal</li>
+            <li>Galería de Imágenes</li>
+            <li>Enlaces a Redes Sociales</li>
+            <li>Formulario de Contacto</li>
+            <li>Currículum Vitae</li>
+          </ul>
+          <p class="price" data-price-cop="1500000" data-price-mxn="6807,10" data-price-usd="375,38"
+            data-price-eur="345,91">
+            COP 1,500,000
+          </p>
+          <button class="contact-button" data-service="Sitio Web Personal" onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <div class="carrusel-item servicio1-item">
+          <h2>Sitio Web de Restaurante o Cafetería</h2>
+          <p>
+            Un sitio web para restaurante o cafetería está diseñado para
+            atraer a clientes y proporcionarles información sobre el menú,
+            ubicaciones, y horarios.
+          </p>
+          <ul>
+            <h2>¿Que llevara tu página web?</h2>
+            <li>Página de Inicio</li>
+            <li>Menú</li>
+            <li>Reservas en Línea</li>
+            <li>Galería de Fotos</li>
+            <li>Opiniones de Clientes</li>
+            <li>Información de Contacto</li>
+            <li>Horario de Atención</li>
+            <li>Blog</li>
+          </ul>
+          <p class="price" data-price-cop="2000000" data-price-mxn="9077,54" data-price-usd="500,54"
+            data-price-eur="461,21">
+            COP 2,000,0000
+          </p>
+          <button class="contact-button" data-service="Sitio Web de Restaurante o Cafetería"
+            onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+      </div>
+      <!-- Botones de navegación del carrusel -->
+      <button class="prev carrusel-button">◀</button>
+      <button class="next carrusel-button">▶</button>
+    </div>
+  </section>
+
+  <section id="servicio2" class="service-description">
+    <!-- Descripción del servicio y selector de divisa -->
+    <div class="service-description-text">
+      <h2>Diseño publicitario</h2>
+      <p id="presentacion-del-servicio-dp">
+        En Stev Arte, nuestro diseño publicitario no se limita a captar
+        miradas; se trata de crear mensajes visuales poderosos que conecten
+        con tu audiencia. Desde banners hasta campañas completas, aseguramos
+        que cada diseño cuente una historia convincente y memorable.
+      </p>
+    </div>
+    <div class="currency-selector">
+      <label for="currency2">Selecciona tu divisa: </label>
+      <select id="currency2">
+        <option value="cop">Peso Colombiano</option>
+        <option value="mxn">Peso Mexicano</option>
+        <option value="usd">Dólar</option>
+        <option value="eur">Euro</option>
+      </select>
+    </div>
+
+    <div id="carrusel-servicio2" class="carrusel">
+      <div class="carrusel-container">
+        <!-- Paquete Básico -->
+        <div class="carrusel-item servicio2-item">
+          <h2>Paquete Básico</h2>
+          <p>
+            Ideal para MIPYME que necesitan diseños publicitarios básicos y
+            efectivos para comenzar a construir su presencia visual.
+          </p>
+          <ul>
+            <h2>¿Qué incluye el paquete básico?</h2>
+            <li>
+              Diseño de 2 Banners (60x160 cm) o 5 Carteles (50x70 cm) o 10
+              Flyers (A5)
+            </li>
+            <li>
+              Gestión básica de Redes Sociales: Diseño de 3 publicaciones
+              mensuales
+            </li>
+            <li>
+              Publicidad en medios tradicionales: 5000 volantes impresos
+            </li>
+            <li>
+              Soporte básico: Asistencia por email durante el desarrollo del
+              proyecto
+            </li>
+          </ul>
+          <p class="price" data-price-cop="600000" data-price-mxn="3250" data-price-usd="180" data-price-eur="160">
+            COP 600,000
+          </p>
+          <button class="contact-button" data-service="Paquete Básico Diseño Publicitario"
+            onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <!-- Paquete Estándar -->
+        <div class="carrusel-item servicio2-item">
+          <h2>Paquete Estándar</h2>
+          <p>
+            Perfecto para MIPYME que buscan un enfoque más completo en sus
+            diseños publicitarios y presencia en redes sociales.
+          </p>
+          <ul>
+            <h2>¿Qué incluye el paquete estándar?</h2>
+            <li>Diseño de 5 Banners Publicitarios (60x160 cm)</li>
+            <li>Diseño de 5 publicaciones para redes sociales</li>
+            <li>Diseño de 1 tarjeta de presentación y 1 flyer (A5)</li>
+            <li>
+              Soporte estándar: Asistencia por email y teléfono durante el
+              desarrollo del proyecto
+            </li>
+          </ul>
+          <p class="price" data-price-cop="1200000" data-price-mxn="6500" data-price-usd="350" data-price-eur="300">
+            COP 1,200,000
+          </p>
+          <button class="contact-button" data-service="Paquete Estándar Diseño Publicitario"
+            onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <!-- Paquete Premium -->
+        <div class="carrusel-item servicio2-item">
+          <h2>Paquete Premium</h2>
+          <p>
+            La mejor opción para MIPYME que buscan una solución publicitaria
+            completa con atención personalizada y materiales de alta calidad.
+          </p>
+          <ul>
+            <h2>¿Qué incluye el paquete premium?</h2>
+            <li>Diseño de 10 Banners Publicitarios (60x160 cm)</li>
+            <li>Diseño de 10 publicaciones para redes sociales</li>
+            <li>
+              Diseño de 1 tarjeta de presentación, 1 flyer (A5) y 1 brochure
+              (A4)
+            </li>
+            <li>
+              Soporte premium: Asistencia prioritaria por email y teléfono
+              durante y después del desarrollo del proyecto
+            </li>
+          </ul>
+          <p class="price" data-price-cop="2500000" data-price-mxn="13500" data-price-usd="700" data-price-eur="600">
+            COP 2,500,000
+          </p>
+          <button class="contact-button" data-service="Paquete Premium Diseño Publicitario"
+            onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+        <!-- Servicio de Trabajo por Horas -->
+        <div class="carrusel-item servicio2-item">
+          <h2>Trabajo por Horas</h2>
+          <p>
+            Ideal para proyectos específicos que requieren atención detallada
+            y diseño personalizado fuera de los paquetes predefinidos.
+          </p>
+          <ul>
+            <h2>¿Qué incluye el trabajo por horas?</h2>
+            <li>
+              Diseño publicitario personalizado según necesidades específicas
+            </li>
+            <li>Revisión y ajustes según las solicitudes del cliente</li>
+            <li>Asesoría en estrategias visuales y publicitarias</li>
+          </ul>
+          <p class="price" data-price-cop="80000" data-price-mxn="450" data-price-usd="25" data-price-eur="22">
+            COP 80,000 por hora
+          </p>
+          <button class="contact-button" data-service="Trabajo por Horas" onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+      </div>
+
+      <!-- Botones de navegación del carrusel -->
+      <button class="prev carrusel-button">◀</button>
+      <button class="next carrusel-button">▶</button>
+    </div>
+  </section>
+
+  <section id="servicio3" class="service-description">
+    <div class="service-description-text">
+      <h2>Manejo de Redes Sociales</h2>
+      <p id="presentacion-del-servicio-mrs">
+        En Stev Arte, nuestro manejo de redes sociales está diseñado para ayudar a las MIPYME a construir una presencia
+        sólida y efectiva
+        en las plataformas sociales. Desde la creación de contenido hasta la gestión de comunidades, nos aseguramos de
+        que tu marca conecte
+        con tu audiencia de manera significativa.
+      </p>
+    </div>
+    <div class="currency-selector">
+      <label for="currency3">Selecciona tu divisa: </label>
+      <select id="currency3">
+        <option value="cop">Peso Colombiano</option>
+        <option value="mxn">Peso Mexicano</option>
+        <option value="usd">Dólar</option>
+        <option value="eur">Euro</option>
+      </select>
+    </div>
+    <div id="carrusel-servicio3" class="carrusel">
+      <div class="carrusel-container">
+        <!-- Paquete Básico -->
+        <div class="carrusel-item servicio3-item">
+          <h2>Paquete Básico</h2>
+          <p>Ideal para MIPYME que desean iniciar su presencia en las redes sociales con una estrategia sólida y
+            profesional. Este paquete
+            proporciona todas las herramientas esenciales para comenzar a construir y fortalecer tu marca, asegurando
+            una conexión efectiva
+            y duradera con tu audiencia desde el primer día.</p>
+          <ul>
+            <h2>¿Qué recibes con el Paquete Básico?</h2>
+            <li>Creación y configuración de perfiles en 2 redes sociales</li>
+            <li>4 publicaciones mensuales por red</li>
+            <li>Diseño gráfico básico</li>
+            <li>Reporte mensual de actividades</li>
+          </ul>
+          <p class="price" data-price-cop="350000" data-price-mxn="1900" data-price-usd="100" data-price-eur="90">
+            COP 350,000
+          </p>
+          <button class="contact-button" data-service="Paquete Básico Manejo de Redes Sociales"
+            onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+
+        <!-- Paquete Estándar -->
+        <div class="carrusel-item servicio3-item">
+          <h2>Paquete Estándar</h2>
+          <p>Perfecto para MIPYME que desean expandir y consolidar su presencia en redes sociales. Este paquete te
+            ayudará a amplificar tu
+            alcance, interactuar de manera más efectiva con tu audiencia y establecer una marca más fuerte y reconocida
+            en el mundo digital.</p>
+          <ul>
+            <h2>¿Qué recibes con el Paquete Estándar?</h2>
+            <li>Gestión de 3 redes sociales</li>
+            <li>12 publicaciones mensuales por red</li>
+            <li>Diseño gráfico avanzado</li>
+            <li>Interacción con la comunidad</li>
+            <li>Reporte quincenal de actividades</li>
+          </ul>
+          <p class="price" data-price-cop="950000" data-price-mxn="5200" data-price-usd="260" data-price-eur="220">
+            COP 950,000
+          </p>
+          <button class="contact-button" data-service="Paquete Estándar Manejo de Redes Sociales"
+            onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+
+        <!-- Paquete Premium -->
+        <div class="carrusel-item servicio3-item">
+          <h2>Paquete Premium</h2>
+          <p>La opción ideal para MIPYME que buscan una gestión integral y profesional de sus redes sociales. Con este
+            paquete,
+            garantizamos una estrategia completa y personalizada que maximiza tu presencia en línea, fomenta la
+            interacción continua con tu
+            audiencia y fortalece la identidad de tu marca.</p>
+          <ul>
+            <h2>¿Qué recibes con el Paquete Premium?</h2>
+            <li>Gestión de 5 redes sociales</li>
+            <li>30 publicaciones mensuales por red</li>
+            <li>Diseño gráfico y video</li>
+            <li>Gestión de campañas publicitarias</li>
+            <li>Interacción intensiva con la comunidad</li>
+            <li>Reporte semanal de actividades</li>
+          </ul>
+          <p class="price" data-price-cop="1950000" data-price-mxn="10500" data-price-usd="540" data-price-eur="470">
+            COP 1,950,000
+          </p>
+          <button class="contact-button" data-service="Paquete Premium Manejo de Redes Sociales"
+            onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+
+        <!-- Paquete Avanzado -->
+        <div class="carrusel-item servicio3-item">
+          <h2>Paquete Avanzado</h2>
+          <p>Perfecto para MIPYME que buscan establecer una presencia sólida y continua en redes sociales. Este paquete
+            asegura una gestión
+            proactiva y consistente, ayudándote a mantener una visibilidad destacada y a construir relaciones duraderas
+            con tu audiencia a
+            lo largo del tiempo.</p>
+          <ul>
+            <h2>¿Qué recibes con el Paquete Avanzado?</h2>
+            <li>Gestión de 4 redes sociales</li>
+            <li>20 publicaciones mensuales por red</li>
+            <li>Diseño gráfico y animaciones</li>
+            <li>Gestión de campañas publicitarias</li>
+            <li>Interacción activa con la comunidad</li>
+            <li>Reporte semanal de actividades</li>
+          </ul>
+          <p class="price" data-price-cop="1500000" data-price-mxn="8100" data-price-usd="410" data-price-eur="360">
+            COP 1,500,000
+          </p>
+          <button class="contact-button" data-service="Paquete Avanzado" onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+
+        <!-- Paquete Corporativo -->
+        <div class="carrusel-item servicio3-item">
+          <h2>Paquete Corporativo</h2>
+          <p>La solución definitiva para grandes empresas que necesitan una gestión exhaustiva y estratégica de sus
+            redes sociales.
+            Este paquete está diseñado para ofrecer un enfoque integral, abordando todas las facetas de la presencia en
+            línea y garantizando
+            un impacto máximo y una gestión eficiente de cada aspecto de tu estrategia digital.</p>
+          <ul>
+            <h2>¿Qué recibes con el Paquete Corporativo?</h2>
+            <li>Gestión de 6 redes sociales</li>
+            <li>40 publicaciones mensuales por red</li>
+            <li>Diseño gráfico, video y animaciones</li>
+            <li>Gestión avanzada de campañas publicitarias</li>
+            <li>Interacción y monitoreo constante de la comunidad</li>
+            <li>Reporte diario de actividades</li>
+          </ul>
+          <p class="price" data-price-cop="3200000" data-price-mxn="17200" data-price-usd="880" data-price-eur="770">
+            COP 3,200,000
+          </p>
+          <button class="contact-button" data-service="Paquete Premium Manejo de Redes Sociales"
+            onclick="contactViaWhatsApp(this)">
+            Contáctenos
+          </button>
+        </div>
+      </div>
+      <!-- Botones de navegación del carrusel -->
+      <button class="carrusel-button prev">◀</button>
+      <button class="carrusel-button next">▶</button>
+    </div>
+  </section>
+
+  <section id="servicio5" class="service-description">
+    <div class="service-description-text">
+      <h2>Diseño Gráfico</h2>
+      <p>
+        En Stev Arte, nuestro equipo de diseño gráfico crea soluciones
+        visuales que comunican eficazmente tu mensaje. Desde logotipos hasta
+        material de marketing, cada diseño está cuidadosamente elaborado para
+        captar la atención y fortalecer la identidad de tu marca.
+      </p>
+    </div>
+    <div class="currency-selector">
+      <label for="currency5">Selecciona tu divisa: </label>
+      <select id="currency5">
+        <option value="cop">Peso Colombiano</option>
+        <option value="mxn">Peso Mexicano</option>
+        <option value="usd">Dólar</option>
+        <option value="eur">Euro</option>
+      </select>
+    </div>
+    <div id="carrusel-servicio5" class="carrusel">
+      <div class="carrusel-container">
+        <!-- Paquete Básico -->
+        <div class="carrusel-item servicio5-item">
+          <h2>Paquete Básico</h2>
+          <p>
+            Ideal para MIPYME que necesitan un inicio sólido en diseño
+            gráfico.
+          </p>
+          <ul>
+            <h2>¿Que recibes con el paquete básico?</h2>
+            <li>Diseño de logotipo</li>
+            <li>Creación de tarjetas de presentación (100 unidades)</li>
+            <li>3 plantillas para publicaciones en redes sociales</li>
+            <li>Asesoría en imagen de marca (1 hora)</li>
+          </ul>
+          <p class="price" data-price-cop="450000" data-price-mxn="2400" data-price-usd="130" data-price-eur="110">
+            COP 450,000
+          </p>
+          <button class="contact-button" data-service="Paquete Básico Diseño Gráfico">
+            Contáctenos
+          </button>
+        </div>
+
+        <!-- Paquete Estándar -->
+        <div class="carrusel-item servicio5-item">
+          <h2>Paquete Estándar</h2>
+          <p>Perfecto para MIPYME que buscan expandir su presencia visual.</p>
+          <ul>
+            <h2>¿Que recibes con el paquete Estándar?</h2>
+            <li>Diseño de material publicitario (3 piezas)</li>
+            <li>10 publicaciones gráficas para redes sociales</li>
+            <li>Edición y retoque fotográfico (hasta 20 fotos)</li>
+            <li>Manejo de identidad visual corporativa</li>
+            <li>Soporte gráfico continuo (hasta 5 horas mensuales)</li>
+          </ul>
+          <p class="price" data-price-cop="900000" data-price-mxn="4900" data-price-usd="260" data-price-eur="230">
+            COP 900,000
+          </p>
+          <button class="contact-button" data-service="Paquete Estándar Diseño Gráfico">
+            Contáctenos
+          </button>
+          Contáctenos
+          </button>
+        </div>
+
+        <!-- Paquete Premium -->
+        <div class="carrusel-item servicio5-item">
+          <h2>Paquete Premium</h2>
+          <p>
+            La opción completa para MIPYME que requieren soluciones avanzadas.
+          </p>
+          <ul>
+            <h2>¿Que recibes con el paquete Premium?</h2>
+            <li>Diseño de campañas publicitarias (1 campaña completa)</li>
+            <li>Producción de contenido multimedia (5 piezas de video)</li>
+            <li>Consultoría personalizada en diseño (3 horas)</li>
+            <li>Asistencia gráfica estratégica (hasta 10 horas mensuales)</li>
+            <li>Soporte prioritario en diseño gráfico</li>
+          </ul>
+          <p class="price" data-price-cop="1700000" data-price-mxn="9300" data-price-usd="510" data-price-eur="450">
+            COP 1,700,000
+          </p>
+          <button class="contact-button" data-service="Paquete Premium Diseño Gráfico">
+            Contáctenos
+          </button>
+        </div>
+        <!-- Servicio: Diseño de Logotipo -->
+        <div class="carrusel-item servicio5-item">
+          <h2>Diseño de Logotipo</h2>
+          <p>
+            En Stev Arte, creamos logotipos personalizados que representan la
+            esencia de tu marca. Nuestros diseños únicos aseguran que tu
+            negocio destaque y sea recordado, proporcionando una identidad
+            visual que comunica profesionalismo y autenticidad.
+          </p>
+          <ul>
+            <h2>¿Que te entregamos?</h2>
+            <li>Diseño único y profesional</li>
+            <li>3 propuestas iniciales</li>
+            <li>2 rondas de revisiones</li>
+            <li>Entrega de archivos en formato vectorial</li>
+          </ul>
+          <p class="price" data-price-cop="200000" data-price-mxn="1100" data-price-usd="60" data-price-eur="50">
+            COP 200,000
+          </p>
+          <button class="contact-button" data-service="Diseño de Logotipo">
+            Contáctenos
+          </button>
+        </div>
+
+        <!-- Servicio: Diseño de Volantes -->
+        <div class="carrusel-item servicio5-item">
+          <h2>Diseño de Volantes</h2>
+          <p>
+            En Stev Arte, diseñamos volantes publicitarios que captan la
+            atención y comunican tu mensaje de manera clara y efectiva.
+            Nuestros diseños atractivos incitan a la acción y te ayudan a
+            promocionar eventos y ofertas especiales, dejando una impresión
+            duradera y alcanzando tus objetivos de marketing.
+          </p>
+          <ul>
+            <h2>¿Que te entregamos?</h2>
+            <li>Diseño atractivo y efectivo</li>
+            <li>Adaptación a diversos formatos de impresión</li>
+            <li>Entrega en formatos listos para imprimir</li>
+          </ul>
+          <p class="price" data-price-cop="50000" data-price-mxn="275" data-price-usd="15" data-price-eur="13">
+            COP 50,000
+          </p>
+          <button class="contact-button" data-service="Diseño de Volantes">
+            Contáctenos
+          </button>
+        </div>
+        <!-- Servicio: Diseño de Pósteres -->
+        <div class="carrusel-item servicio5-item">
+          <h2>Diseño de Pósteres</h2>
+          <p>
+            u audiencia y comunicar tu mensaje de manera efectiva. Nuestro
+            equipo de diseño gráfico se dedica a crear pósteres impactantes y
+            visualmente atractivos que no solo destacan entre la multitud,
+            sino que también transmiten la esencia de tu marca
+          </p>
+          <ul>
+            <h2>¿Que te entregamos?</h2>
+            <li>Diseño visualmente impactante</li>
+            <li>Adaptación a diversos tamaños</li>
+            <li>Entrega en alta resolución</li>
+          </ul>
+          <p class="price" data-price-cop="70000" data-price-mxn="385" data-price-usd="20" data-price-eur="17">
+            COP 70,000
+          </p>
+          <button class="contact-button" data-service="Diseño de Pósteres">
+            Contáctenos
+          </button>
+        </div>
+
+        <!-- Servicio: Diseño de Folletos -->
+        <div class="carrusel-item servicio5-item">
+          <h2>Diseño de Folletos</h2>
+          <p>
+            En Stev Arte, diseñamos folletos informativos y de marketing que
+            captan la atención de tu audiencia y comunican tu mensaje de
+            manera clara y atractiva. Nuestros folletos están estratégicamente
+            creados para promover tus productos y servicios, ayudando a
+            aumentar la visibilidad y el interés en tu marca.
+          </p>
+          <ul>
+            <h2>¿Que te entregamos?</h2>
+            <li>Diseño atractivo y funcional</li>
+            <li>Adaptación a diferentes pliegos y tamaños</li>
+            <li>Entrega en formato listo para imprimir</li>
+          </ul>
+          <p class="price" data-price-cop="100000" data-price-mxn="550" data-price-usd="30" data-price-eur="26">
+            COP 100,000
+          </p>
+          <button class="contact-button" data-service="Diseño de Folletos">
+            Contáctenos
+          </button>
+        </div>
+
+        <!-- Servicio: Diseño de Banners -->
+        <div class="carrusel-item servicio5-item">
+          <h2>Diseño de Banners</h2>
+          <p>Impulsa tu marca con nuestros diseños de banners publicitarios, ideales para web y eventos. Creamos piezas
+            visuales impactantes
+            que capturan la esencia de tu negocio y conectan con tu audiencia, ayudándote a destacar en cualquier
+            entorno. Confía en nuestra
+            creatividad y experiencia para transformar tus ideas en herramientas de marketing poderosas y efectivas.</p>
+          <ul>
+            <h2>¿Que te entregamos?</h2>
+            <li>Diseño atractivo y llamativo</li>
+            <li>Adaptación a diferentes tamaños y plataformas</li>
+            <li>Entrega en formato digital</li>
+          </ul>
+          <p class="price" data-price-cop="120000" data-price-mxn="660" data-price-usd="35" data-price-eur="30">
+            COP 120,000
+          </p>
+          <button class="contact-button" data-service="Diseño de Banners">
+            Contáctenos
+          </button>
+        </div>
+
+        <!-- Servicio: Edición de Imágenes -->
+        <div class="carrusel-item servicio5-item">
+          <h2>Edición de Imágenes</h2>
+          <p>Transforma tus fotos con nuestros servicios de edición y retoque de imágenes profesionales. Nos
+            especializamos en mejorar la
+            calidad visual, corregir imperfecciones y realzar los detalles, asegurando que cada imagen cuente una
+            historia impactante. Con
+            nuestro toque experto, tus fotografías capturarán la atención y dejarán una impresión duradera. Confía en
+            nosotros para llevar
+            tus imágenes al siguiente nivel.</p>
+          <ul>
+            <h2>¿Que te entregamos?</h2>
+            <li>Retoque fotográfico profesional</li>
+            <li>Corrección de color y ajustes</li>
+            <li>Eliminación de fondo y manipulación de imágenes</li>
+          </ul>
+          <p class="price" data-price-cop="50000" data-price-mxn="275" data-price-usd="15" data-price-eur="13">
+            COP 50,000
+          </p>
+          <button class="contact-button" data-service="Edición de Imágenes">
+            Contáctenos
+          </button>
+        </div>
+      </div>
+      <button class="carrusel-button prev">◀</button>
+      <button class="carrusel-button next">▶</button>
+    </div>
+  </section>
+
+  <section id="servicio6" class="service-description">
+    <div class="service-description-text">
+      <h2>Soluciones de Software Empresarial</h2>
+      <p>
+        En Stev Arte, ofrecemos soluciones de software diseñadas para mejorar
+        la eficiencia operativa de las pequeñas, medianas y grandes empresas.
+        Nuestros módulos abarcan desde la gestión de inventarios hasta la
+        contabilidad y la tributación fiscal, proporcionando herramientas
+        integrales para optimizar tu negocio.
+      </p>
+    </div>
+    <div class="currency-selector">
+      <label for="currency6">Selecciona tu divisa: </label>
+      <select id="currency6">
+        <option value="cop">Peso Colombiano</option>
+        <option value="mxn">Peso Mexicano</option>
+        <option value="usd">Dólar</option>
+        <option value="eur">Euro</option>
+      </select>
+    </div>
+    <div id="carrusel-servicio6" class="carrusel">
+      <div class="carrusel-container">
+        <!-- Módulo de Inventario -->
+        <div class="carrusel-item servicio6-item">
+          <h2>Módulo de Inventario</h2>
+          <p>
+            Gestión eficiente de inventarios para empresas de todos los tamaños.
+          </p>
+          <ul>
+            <h2>¿Qué te ofrece nuestro Módulo de Inventarios?</h2>
+            <li>Control de stock en tiempo real</li>
+            <li>Alertas de reabastecimiento</li>
+            <li>Reportes detallados de inventario</li>
+            <li>Integración con sistemas de ventas</li>
+          </ul>
+          <p class="price" data-price-cop="700000" data-price-mxn="3800" data-price-usd="200" data-price-eur="180">
+            COP 400,000
+          </p>
+          <button class="contact-button" data-service="Módulo de Inventario">
+            Contáctenos
+          </button>
+        </div>
+        <!-- Módulo de Contabilidad -->
+        <div class="carrusel-item servicio6-item">
+          <h2>Módulo de Contabilidad</h2>
+          <p>
+            Simplifica la contabilidad de tu empresa con nuestras herramientas avanzadas.
+          </p>
+          <ul>
+            <h2>¿Qué te ofrece nuestro Módulo de Contabilidad?</h2>
+            <li>Gestión de libros contables</li>
+            <li>Conciliación bancaria automatizada</li>
+            <li>Generación de estados financieros</li>
+            <li>Soporte para múltiples monedas</li>
+          </ul>
+          <p class="price" data-price-cop="1000000" data-price-mxn="5400" data-price-usd="290" data-price-eur="260">
+            COP 1,000,000
+          </p>
+          <button class="contact-button" data-service="Módulo de Contabilidad">
+            Contáctenos
+          </button>
+        </div>
+        <!-- Prueba Gratuita -->
+        <div class="carrusel-item servicio6-item">
+          <h2>Prueba Gratuita</h2>
+          <p>
+            Prueba nuestro software de inventario y facturación sin costo alguno.
+          </p>
+          <ul>
+            <h2>Pruébalo y descubre</h2>
+            <li>Acceso completo al módulo de inventario</li>
+            <li>Facturación básica local </li>
+            <li>Capacitación en el manejo del software</li>
+            <li>Sin compromiso de compra</li>
+          </ul>
+          <p class="price">GRATIS</p>
+          <button class="contact-button" data-service="Prueba Gratuita">
+            Contáctenos
+          </button>
+        </div>
+      </div>
+      <button class="carrusel-button prev">◀</button>
+      <button class="carrusel-button next">▶</button>
+    </div>
+  </section>
+
+  <section id="portafolio" class="portafolio-section">
+    <h2>Portafolio de Servicios</h2>
+    <p>Conoce nuestros servicios y cómo podemos ayudarte a alcanzar tus objetivos de marketing y publicidad.</p>
+    <!-- Gestión de Redes Sociales -->
+    <div class="gestion-redes">
+      <h2>Gestión de Redes Sociales</h2>
+      <p>En la era digital, una presencia efectiva en redes sociales es esencial para el éxito de cualquier negocio. Nos
+        encargamos de la gestión integral de tus redes sociales, diseñando estrategias personalizadas para elevar tu
+        visibilidad en línea y captar la atención de nuevos clientes. Con nuestro enfoque experto, no solo
+        incrementaremos tu presencia en las plataformas sociales, sino que también fortaleceremos tu marca, fomentaremos
+        el compromiso y convertiremos seguidores en clientes leales. Confía en nosotros para transformar tu presencia en
+        redes sociales en una poderosa herramienta de crecimiento para tu empresa.</p>
+
+      <!-- Contenedor del carrusel -->
+      <div class="carousel-gestion">
+        <!-- Elemento del carrusel -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrapper">
+            <img src="imagenes/manejo-de-redes-banner.jpg" alt="Gestión de Redes Sociales 1">
+          </div>
+        </div>
+        <!-- Elemento del carrusel -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrapper">
+            <img src="imagenes/manejo-de-redes-banner2.jpg" alt="Gestión de Redes Sociales 2">
+          </div>
+        </div>
+        <!-- Elemento del carrusel -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrapper">
+            <img src="imagenes/manejo-de-redes-banner3.jpg" alt="Gestión de Redes Sociales 3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones de navegación del carrusel -->
+      <button class="gestion-prev-button">❮</button>
+      <button class="gestion-next-button">❯</button>
+    </div>
+
+    <!-- Publicidad Digital -->
+    <div class="servicio-item">
+      <h2>Publicidad Digital</h2>
+      <p>En un mundo donde la presencia en línea es crucial, nuestras estrategias de publicidad digital están diseñadas
+        para maximizar la
+        visibilidad de tu negocio y atraer a clientes potenciales de manera efectiva. Con nuestro enfoque personalizado
+        y data-driven,
+        garantizamos que tu mensaje llegue al público adecuado, impulsando el crecimiento y éxito de tu marca.</p>
+      <!-- Contenedor del carrusel -->
+      <div class="carousel-digital">
+        <!-- Elemento del carrusel -->
+        <div class="digital-item">
+          <div class="carousel-img-wrapper">
+            <img src="imagenes/Banner para computador.jpg" alt="Diseño Publicitario 1">
+          </div>
+        </div>
+        <!-- Elemento del carrusel -->
+        <div class="digital-item">
+          <div class="carousel-img-wrapper">
+            <img src="imagenes/banner-4.jpg" alt="Diseño Publicitario 4">
+          </div>
+        </div>
+        <!-- Elemento del carrusel -->
+        <div class="digital-item">
+          <div class="carousel-img-wrapper">
+            <img src="imagenes/banner-2.jpg" alt="Diseño Publicitario 2">
+          </div>
+        </div>
+        <!-- Elemento del carrusel -->
+        <div class="digital-item">
+          <div class="carousel-img-wrapper">
+            <img src="imagenes/banner-3.jpg" alt="Diseño Publicitario 3">
+          </div>
+        </div>
+      </div>
+
+      <button class="digital-prev-button">❮</button>
+      <button class="digital-next-button">❯</button>
+    </div>
+
+    <!-- Consultoría en Marketing -->
+    <div class="servicio-item">
+      <h2>Consultoría en Marketing</h2>
+      <p>En un mercado altamente competitivo y en constante evolución, contar con una asesoría de marketing efectiva es
+        crucial para alcanzar
+        y superar tus objetivos comerciales. Nuestra asesoría se centra en desarrollar estrategias personalizadas que se
+        alinean con las
+        necesidades específicas de tu negocio. Nos enfocamos en ofrecer una solución integral basada en un análisis
+        profundo del mercado,
+        la competencia y las tendencias actuales. Evaluamos y optimizamos cada aspecto de tu estrategia de marketing,
+        desde la segmentación
+        del público objetivo hasta la implementación de tácticas digitales y tradicionales.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-contact">
+        <h2>Contáctanos</h2>
+        <p>Teléfono: 3214785293</p>
+        <p>Email: contactostevarte@gmail.com</p>
+      </div>
+      <div class="footer-social">
+        <h2>Síguenos</h2>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100089684202841"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/stev_arte/"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/stev-arte-6a92382b0/"><i class="fab fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h2>Enlaces útiles</h2>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="tyc.html">Términos y Condiciones</a></li>
+          <li>
+            <a href="tyc.html#politicas-privacidad">Política de Privacidad</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        Desarrollado y diseñado por Stev Arte &copy; 2024. Todos los derechos
+        reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.querySelector(".main-nav");
+
+      // Toggle del menú
+      menuToggle.addEventListener("change", function () {
+        nav.style.display = this.checked ? "block" : "none";
+      });
+
+      // Función para manejar el desplazamiento de carruseles
+      function scrollCarousel(carouselContainer, scrollAmount) {
+        const maxScrollLeft = carouselContainer.scrollWidth - carouselContainer.clientWidth;
+        let newScrollLeft = carouselContainer.scrollLeft + scrollAmount;
+
+        // Ajuste para no hacer loop cuando se excede el límite
+        if (newScrollLeft > maxScrollLeft) {
+          newScrollLeft = maxScrollLeft; // Limite superior
+        } else if (newScrollLeft < 0) {
+          newScrollLeft = 0; // Limite inferior
+        }
+
+        carouselContainer.scrollTo({
+          left: newScrollLeft,
+          behavior: "smooth",
+        });
+      }
+
+      // Inicialización de los carruseles de los servicios
+      function initializeCarousel(carouselSelector, prevButtonSelector, nextButtonSelector) {
+        const carouselContainer = document.querySelector(carouselSelector);
+        const prevButton = document.querySelector(prevButtonSelector);
+        const nextButton = document.querySelector(nextButtonSelector);
+
+        if (carouselContainer && prevButton && nextButton) {
+          prevButton.addEventListener("click", function () {
+            scrollCarousel(carouselContainer, -carouselContainer.clientWidth);
+          });
+
+          nextButton.addEventListener("click", function () {
+            scrollCarousel(carouselContainer, carouselContainer.clientWidth);
+          });
+        }
+      }
+
+      initializeCarousel("#carrusel-servicio1", "#servicio1 .carrusel-button.prev", "#servicio1 .carrusel-button.next");
+      initializeCarousel("#carrusel-servicio2", "#servicio2 .carrusel-button.prev", "#servicio2 .carrusel-button.next");
+      initializeCarousel("#carrusel-servicio3", "#servicio3 .carrusel-button.prev", "#servicio3 .carrusel-button.next");
+      initializeCarousel("#carrusel-servicio5", "#servicio5 .carrusel-button.prev", "#servicio5 .carrusel-button.next");
+      initializeCarousel("#carrusel-servicio6", "#servicio6 .carrusel-button.prev", "#servicio6 .carrusel-button.next");
+
+      // Mostrar y ocultar detalles del servicio al hacer clic
+      const serviceItems = document.querySelectorAll(".service-item");
+      const serviceDetails = document.querySelectorAll(".service-description");
+
+      serviceDetails.forEach((detail) => {
+        detail.style.display = "none";
+      });
+
+      serviceItems.forEach((item) => {
+        item.addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute("data-target").substring(1);
+
+          serviceDetails.forEach((detail) => {
+            if (detail.id === targetId) {
+              detail.style.display = detail.style.display === "block" ? "none" : "block";
+            } else {
+              detail.style.display = "none";
+            }
+          });
+
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      // Configurar todos los videos para reproducirse en bucle
+      document.querySelectorAll("video").forEach((video) => {
+        video.loop = true;
+        video.play().catch((error) => {
+          console.error("Error al reproducir el video:", error);
+        });
+      });
+
+      // Formateo de precios
+      function formatPrice(price) {
+        return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+
+      // Actualización de precios en función de la divisa seleccionada
+      const currencySelectors = document.querySelectorAll(".currency-selector select");
+
+      currencySelectors.forEach((selector) => {
+        selector.addEventListener("change", function () {
+          const selectedCurrency = this.value;
+          const serviceId = this.closest(".service-description").id;
+          const service = document.querySelector(`#${serviceId}`);
+          const items = service.querySelectorAll(".carrusel-item");
+
+          items.forEach((item) => {
+            const priceElement = item.querySelector(".price");
+            const price = parseFloat(priceElement.getAttribute(`data-price-${selectedCurrency}`));
+            const formattedPrice = formatPrice(price);
+            priceElement.textContent = `${formattedPrice} ${selectedCurrency.toUpperCase()}`;
+          });
+        });
+      });
+
+      // Inicializar precios con la divisa por defecto
+      serviceDetails.forEach((service) => {
+        const items = service.querySelectorAll(".carrusel-item");
+
+        items.forEach((item) => {
+          const priceElement = item.querySelector(".price");
+          const price = parseFloat(priceElement.getAttribute(`data-price-cop`));
+          const formattedPrice = formatPrice(price);
+          priceElement.textContent = `${formattedPrice} COP`;
+        });
+      });
+
+      // Efecto de aparición en el contenido principal
+      const heroContent = document.querySelector(".hero-content");
+
+      if (heroContent) {
+        const heroObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                heroContent.style.opacity = "1";
+                heroContent.style.transform = "translateY(0)";
+              }
+            });
+          },
+          {
+            threshold: 0.5,
+          }
+        );
+
+        heroObserver.observe(heroContent);
+      }
+
+      // Ajustes específicos para pantallas pequeñas
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        const mugsProjects = document.querySelector(".mugs-sublimados-projects");
+        const projectDetails = document.querySelectorAll(".project-details");
+
+        let currentIndex = 0;
+
+        function scrollToProject(index) {
+          const project = projectDetails[index];
+          if (project) {
+            mugsProjects.style.transform = `translateX(-${project.offsetLeft}px)`;
+            currentIndex = index;
+          }
+        }
+
+        const nextBtn = document.querySelector(".mugs-button.next");
+        const prevBtn = document.querySelector(".mugs-button.prev");
+
+        nextBtn.addEventListener("click", function () {
+          if (currentIndex < projectDetails.length - 1) {
+            scrollToProject(currentIndex + 1);
+          }
+        });
+
+        prevBtn.addEventListener("click", function () {
+          if (currentIndex > 0) {
+            scrollToProject(currentIndex - 1);
+          }
+        });
+      }
+
+      const prevButton = document.querySelector(".prev-button");
+      const nextButton = document.querySelector(".next-button");
+      const servicesContainer = document.querySelector(".services-container");
+      const carouselItems = document.querySelectorAll(".service-item");
+
+      // Asumimos que todos los elementos tienen el mismo ancho
+      const itemWidth = carouselItems[0].offsetWidth;
+      const maxScrollLeft = servicesContainer.scrollWidth - servicesContainer.clientWidth;
+
+      prevButton.addEventListener("click", function () {
+        servicesContainer.scrollBy({
+          top: 0,
+          left: -itemWidth,
+          behavior: "smooth",
+        });
+      });
+
+      nextButton.addEventListener("click", function () {
+        servicesContainer.scrollBy({
+          top: 0,
+          left: itemWidth,
+          behavior: "smooth",
+        });
+      });
+
+      // Asegurar que el carrusel inicie en la posición cero
+      servicesContainer.scrollLeft = 0;
+
+      // Define la función para manejar el clic en el botón de contacto
+      function contactViaWhatsApp(button) {
+        // Obtiene el valor del atributo 'data-service' del botón clicado
+        var serviceName = button.getAttribute('data-service');
+        // Define el enlace base de WhatsApp con el mensaje predefinido
+        var baseWhatsAppURL = 'https://wa.me/message/BW2UDDVDHQ33J1';
+        // Construye el mensaje que se enviará en el chat de WhatsApp
+        var message = 'Hola, quiero más información sobre ' + serviceName + '.';
+        // Codifica el mensaje para ser usado en la URL
+        var encodedMessage = encodeURIComponent(message);
+        // Construye el enlace completo con el mensaje codificado
+        var fullURL = baseWhatsAppURL + '?text=' + encodedMessage;
+        // Abre el enlace en una nueva ventana o pestaña
+        window.open(fullURL, '_blank', 'noopener,noreferrer');
+      }
+
+      // Asocia la función contactViaWhatsApp a todos los botones de contacto
+      document.querySelectorAll('.contact-button').forEach(button => {
+        button.addEventListener('click', function (event) {
+          // Llama a la función contactViaWhatsApp y evita el comportamiento por defecto del botón
+          event.preventDefault();
+          contactViaWhatsApp(this);
+        });
+      });
+
+      // Inicialización del carrusel de gestión de redes sociales
+      function initializeGestionRedesCarousel() {
+        const carouselContainer = document.querySelector(".carousel-gestion");
+        const prevButton = document.querySelector(".gestion-prev-button");
+        const nextButton = document.querySelector(".gestion-next-button");
+        const carouselItemWidth = carouselContainer.querySelector('.carousel-item').clientWidth; // Ancho de un elemento
+
+        if (carouselContainer && prevButton && nextButton) {
+          prevButton.addEventListener("click", function () {
+            scrollCarousel(carouselContainer, -carouselItemWidth); // Desplazar un elemento hacia la izquierda
+          });
+
+          nextButton.addEventListener("click", function () {
+            scrollCarousel(carouselContainer, carouselItemWidth); // Desplazar un elemento hacia la derecha
+          });
+        }
+      }
+
+      initializeGestionRedesCarousel();
+
+      console.log("Popup script executed");
+
+      const popup = document.querySelector("#popup");
+      if (popup) {
+        console.log("Popup element found");
+        popup.style.display = "flex"; // Usa flex para centrar el contenido
+      } else {
+        console.log("Popup element not found");
+      }
+
+      // Cerrar el popup cuando se hace clic en el botón de cierre
+      const closeBtn = document.querySelector("#closePopup");
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+          popup.style.display = "none";
+        });
+      }
+
+      // Cerrar el popup cuando se hace clic fuera del contenido
+      popup.addEventListener("click", function (event) {
+        if (event.target === popup) {
+          popup.style.display = "none";
+        }
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stev Arte - Empresa de Publicidad</title>
+    
+    <!-- Preconexión para mejorar el rendimiento de fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    
+    <!-- Enlace a las fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <!-- Enlace a FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    
+    <!-- Enlace a la hoja de estilos principal -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Enlace a jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/favicon-stev-arte.jpg" type="image/png">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="imagenes/LOGO-1.png" alt="Stev Arte" />
+      </a>
+    </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">
+      <i class="fas fa-bars"></i>
+    </label>
+    <section class="main-nav">
+      <nav>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#portafolio">Portafolio</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a href="ofertas.html">PYMES</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=100089684202841" class="social-icon" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/stev_arte/" class="social-icon" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/message/BW2UDDVDHQ33J1" class="social-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </section>
+  </header>
+  <section id="custom-section" class="service-section">
+    <!-- Sección de Gorras Sublimadas -->
+    <section id="gorras" class="product-section">
+      <div class="product-info">
+        <div class="image-container">
+          <img src="imagenes/Gorras-sublimadas-1200-x800.jpg" alt="Gorras Sublimadas" />
+        </div>
+        <div class="product-description">
+          <h2>Gorras Sublimadas</h2>
+          <p>
+            Descubre nuestras gorras sublimadas, ideales tanto como accesorio de moda como para promoción.
+            Personalización completa y materiales de alta calidad garantizan un producto único y duradero.
+          </p>
+          <a href="https://wa.me/message/BW2UDDVDHQ33J1?text=Hola%20quiero%20más%20información%20sobre%20el%20servicio%20de%20Gorras%20Sublimadas" class="contact-button" target="_blank">
+            Contáctenos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Sección de Manillas Sublimadas -->
+    <section id="manillas" class="product-section reverse">
+      <div class="product-info">
+        <div class="image-container">
+          <img src="imagenes/Manillas-sublimadas-1200-X800.jpg" alt="Manillas Sublimadas" />
+        </div>
+        <div class="product-description">
+          <h2>Manillas Sublimadas</h2>
+          <p>
+            Nuestras manillas sublimadas son la elección perfecta para eventos y promociones. Diseños personalizados
+            que destacan y materiales resistentes aseguran que tu marca se destaque en cualquier ocasión.
+          </p>
+          <a href="https://wa.me/message/BW2UDDVDHQ33J1?text=Hola%20quiero%20más%20información%20sobre%20el%20servicio%20de%20Manillas%20Sublimadas" class="contact-button" target="_blank">
+            Contáctenos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Sección de Hoodies Estampados -->
+    <section id="camisetas-hoodies" class="product-section">
+      <div class="product-info">
+        <div class="image-container">
+          <img src="imagenes/hoddie dama 1.jpg" alt="Hoodies Estampados" />
+        </div>
+        <div class="product-description">
+          <h2>Hoodies Estampados</h2>
+          <p>
+            Nuestros hoodies estampados y camisetas serigrafiadas ofrecen una calidad excepcional y diseños únicos.
+            Perfectos para promocionar tu marca con estilo y durabilidad garantizada.
+          </p>
+          <a href="https://wa.me/message/BW2UDDVDHQ33J1?text=Hola%20quiero%20más%20información%20sobre%20el%20servicio%20de%20Hoodies%20Estampados" class="contact-button" target="_blank">
+            Contáctenos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Sección de Camisetas Personalizadas -->
+    <section id="camisetas" class="product-section reverse">
+      <div class="product-info">
+        <div class="image-container">
+          <img src="imagenes/Modelo-camiseta-1.jpg" alt="Camisetas Personalizadas" />
+        </div>
+        <div class="product-description">
+          <h2>Camisetas Personalizadas</h2>
+          <p>
+            Diseños únicos y personalizados en camisetas para promocionar tu marca o evento. Alta calidad en serigrafía
+            y sublimación aseguran que tu mensaje se destaque con cada camiseta que distribuyas.
+          </p>
+          <a href="https://wa.me/message/BW2UDDVDHQ33J1?text=Hola%20quiero%20más%20información%20sobre%20el%20servicio%20de%20Camisetas%20Personalizadas" class="contact-button" target="_blank">
+            Quiero más información
+          </a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Sección de Bolsas Personalizadas -->
+    <section id="bolsas" class="product-section">
+      <div class="product-info">
+        <div class="image-container">
+          <img src="imagenes/bolsa-de-papel-1200-X-800.jpg" alt="Bolsas Personalizadas" />
+        </div>
+        <div class="product-description">
+          <h2>Bolsas Personalizadas</h2>
+          <p>
+            Bolsas personalizadas ideales para promocionar tu marca de manera sostenible y efectiva. Diseños únicos y
+            materiales resistentes aseguran que tus clientes usen tus bolsas en todas partes.
+          </p>
+          <a href="https://wa.me/message/BW2UDDVDHQ33J1?text=Hola%20quiero%20más%20información%20sobre%20el%20servicio%20de%20Bolsas%20Personalizadas" class="contact-button" target="_blank">
+            Quiero más información
+          </a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Sección de Mugs Personalizados -->
+    <section id="mugs" class="product-section reverse">
+      <div class="product-info">
+        <div class="image-container">
+          <img src="imagenes/Mugs-1200-X-800.jpg" alt="Mugs Personalizados" />
+        </div>
+        <div class="product-description">
+          <h2>Mugs Personalizados</h2>
+          <p>
+            Mugs personalizados que destacan en cualquier oficina o hogar. Perfectos como regalo corporativo o
+            promocional. Alta calidad en impresión asegura que tu diseño se vea nítido y duradero.
+          </p>
+          <a href="https://wa.me/message/BW2UDDVDHQ33J1?text=Hola%20quiero%20más%20información%20sobre%20el%20servicio%20de%20Mugs%20Personalizados" class="contact-button" target="_blank">
+            Quiero más información
+          </a>
+        </div>
+      </div>
+    </section>
+  </section>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-contact">
+        <h3>Contáctanos</h3>
+        <p>Teléfono: 3214785293</p>
+        <p>Email: contactostevarte@gmail.com</p>
+      </div>
+      <div class="footer-social">
+        <h3>Síguenos</h3>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100089684202841">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/stev_arte/">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/stev-arte-6a92382b0/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Enlaces útiles</h3>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#portafolio">Portafolio</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a href="tyc.html">Términos y Condiciones</a></li>
+          <li><a href="tyc.html#politicas-privacidad">Política de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        Desarrollado y diseñado por Stev Arte &copy; 2024. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Función para animar la descripción cuando se hace scroll
+    function animateDescription(description) {
+      description.style.opacity = "1";
+      description.style.transform = "translateY(0)";
+    }
+
+    // Función para animar las imágenes al hacer scroll
+    function animateImages(images) {
+      images.forEach((image) => {
+        image.style.transition = "transform 0.3s ease-out";
+      });
+    }
+
+    // Configuración inicial de la animación
+    function setupAnimation() {
+      let productSections = document.querySelectorAll(
+        ".service-section .product-info"
+      );
+
+      function handleScroll() {
+        productSections.forEach((section) => {
+          let sectionTop = section.getBoundingClientRect().top;
+          let sectionHeight = section.clientHeight;
+
+          if (
+            sectionTop <= window.innerHeight - sectionHeight / 2 &&
+            sectionTop >= -sectionHeight / 2
+          ) {
+            let description = section.querySelector(".product-description");
+            animateDescription(description);
+
+            let images = section.querySelectorAll(".image-container img");
+            animateImages(images);
+          }
+        });
+      }
+
+      // Función para limitar la cantidad de veces que se ejecuta el evento scroll
+      function debounce(func, wait = 10, immediate = true) {
+        let timeout;
+        return function () {
+          let context = this,
+            args = arguments;
+          let later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+          };
+          let callNow = immediate && !timeout;
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+          if (callNow) func.apply(context, args);
+        };
+      }
+
+      window.addEventListener("scroll", debounce(handleScroll));
+      handleScroll(); // Llamada inicial al cargar la página
+    }
+
+    document.addEventListener("DOMContentLoaded", setupAnimation); // Ejecutar setupAnimation cuando se carga el DOM
+  </script>
+</body>
+</html>

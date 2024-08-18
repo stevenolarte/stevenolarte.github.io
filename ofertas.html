@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Stev Arte - Agencia de Publicidad, especializada en marketing digital y estrategias publicitarias innovadoras."
+    />
+    <meta
+      name="keywords"
+      content="marketing, publicidad, agencia de publicidad, estrategias digitales, Stev Arte"
+    />
+    <meta name="author" content="Stev Arte" />
+    <meta property="og:title" content="Stev Arte - Agencia de Publicidad" />
+    <meta
+      property="og:description"
+      content="Descubre cómo Stev Arte puede transformar tu estrategia de marketing con soluciones creativas y efectivas."
+    />
+    <meta
+      property="og:image"
+      content="imagenes/imagen-al-compartir-en-redes.jpg"
+    />
+    <meta property="og:url" content="https://stevarte.com" />
+    <meta property="og:type" content="website" />
+
+    <title>Stev Arte - Agencia de Publicidad</title>
+
+    <!-- Preconexión para mejorar el rendimiento de fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- Enlace a las fuentes de Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Enlace a FontAwesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Enlace a la hoja de estilos principal -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/favicon-stev-arte.jpg" type="image/png" />
+    <!-- Enlace a jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Enlace a Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="imagenes/LOGO-1.png" alt="Stev Arte" />
+        </a>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </label>
+      <section class="main-nav">
+        <nav>
+          <ul>
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#portfolio-section">Portafolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="social-icons">
+        <a
+          href="https://www.facebook.com/profile.php?id=100089684202841"
+          class="social-icon"
+          target="_blank"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/stev_arte/"
+          class="social-icon"
+          target="_blank"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://wa.me/message/BW2UDDVDHQ33J1"
+          class="social-icon"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </section>
+    </header>
+
+    <section id="paquete1" class="service-description">
+      <div class="service-description-text">
+        <h2>¡Impulsa tu Negocio con Publicidad Efectiva y Asequible!l</h2>
+        <p>
+          ¿Eres una empresa que está comenzando su viaje en el mundo del
+          marketing digital y la publicidad? En Stev Arte, entendemos la
+          importancia de dar esos primeros pasos sin romper el presupuesto. Es
+          por eso que hemos creado una oferta especial, pensada para
+          emprendedores como tú, que desean aumentar su visibilidad y atraer más
+          clientes.
+        </p>
+      </div>
+      <div class="currency-selector">
+        <label for="currency">Selecciona tu divisa: </label>
+        <select id="currency">
+          <option value="cop">Peso Colombiano</option>
+          <option value="mxn">Peso Mexicano</option>
+          <option value="usd">Dólar</option>
+          <option value="eur">Euro</option>
+        </select>
+      </div>
+      <div id="carrusel-paquete1" class="carrusel">
+        <div class="carrusel-container">
+          <!-- Paquete Básico -->
+          <div class="carrusel-item paquete1-item">
+            <h2>Paquete Básico</h2>
+            <p>
+              Este paquete incluye todo lo necesario para que tu negocio
+              despegue en el mundo digital.
+            </p>
+            <ul>
+              <h2>¿Qué incluye?</h2>
+              <li>
+                Diseño gráfico de 3 publicaciones para facebook o instagram
+              </li>
+              <br />
+              <li>
+                Creación de redes sociales y capacitación sobre el manejo de
+                redes
+              </li>
+              <br />
+              <li>Landing page</li>
+              <br />
+              <li>
+                Publicidad en Meta por 15 días con opción de renovación con un
+                costo adicional
+              </li>
+            </ul>
+            <p
+              class="price"
+              data-price-cop="1000000"
+              data-price-mxn="4500"
+              data-price-usd="250"
+              data-price-eur="220"
+            >
+              COP 1,000,000
+            </p>
+            <button
+              class="contact-button"
+              data-service="Paquete Básico"
+              onclick="contactViaWhatsApp(this)"
+            >
+              Contáctenos
+            </button>
+          </div>
+          <!-- Paquete Premium -->
+          <div class="carrusel-item paquete2-item">
+            <h2>Paquete Premium</h2>
+            <p>
+              El Paquete Premium está diseñado para proporcionar a las PYMES una
+              solución completa con herramientas avanzadas para la
+              administración de su negocio en línea.
+            </p>
+            <ul>
+              <h2>¿Qué incluye?</h2>
+              <li>
+                Diseño gráfico de 10 publicaciones para facebook o instagram
+              </li>
+              <br />
+              <li>
+                Sistema de administración de inventarios con facturación
+                electronica
+              </li>
+              <br />
+              <li>
+                Tienda en Linea con enlace a redes sociales y pasarela de pagos
+              </li>
+              <br />
+              <li>Campaña en redes sociales por 28 días</li>
+            </ul>
+            <p
+              class="price"
+              data-price-cop="3000000"
+              data-price-mxn="13500"
+              data-price-usd="800"
+              data-price-eur="700"
+            >
+              COP 3,000,000
+            </p>
+            <button
+              class="contact-button"
+              data-service="Paquete Premium"
+              onclick="contactViaWhatsApp(this)"
+            >
+              Contáctenos
+            </button>
+          </div>
+          <div class="carrusel-item paquete2-item">
+            <h2>Software de Gestión de Inventarios - Versión de Prueba</h2>
+            <p>
+              En esta versión de prueba del software de gestión de inventarios, es crucial incluir características que permitan a los usuarios 
+              experimentar el valor y la funcionalidad del producto sin comprometer la seguridad o la integridad de los datos completos de su 
+              inventario.
+            </p>
+            <ul>
+              <h2>¿Qué incluye?</h2>
+              <li>Control básico de inventarios</li>
+              <li>Interfaz de usuario completa</li>
+              <li>Reportes y análisis básicos</li>
+              <li>Alertas y Notificaciones</li>
+            </ul>
+            <p class="price">
+              <strong>¡Versión de prueba gratuita!</strong>
+            </p>
+            <button
+              class="contact-button"
+              data-service="Paquete Premium"
+              onclick="contactViaWhatsApp(this)"
+            >
+              Contáctenos
+            </button>
+          </div>
+          
+        </div>
+        <!-- Botones de navegación del carrusel -->
+        <button class="prev carrusel-button">◀</button>
+        <button class="next carrusel-button">▶</button>
+      </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-contact">
+            <h3>Contáctanos</h3>
+            <p>Teléfono: 3214785293</p>
+            <p>Email: contactostevarte@gmail.com</p>
+          </div>
+          <div class="footer-social">
+            <h3>Síguenos</h3>
+            <ul class="social-links">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=100089684202841"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/stev_arte/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/stev-arte-6a92382b0/"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Enlaces útiles</h3>
+            <ul>
+              <li><a href="index.html#inicio">Inicio</a></li>
+              <li><a href="index.html#servicios">Servicios</a></li>
+              <li><a href="index.html#portafolio">Portafolio</a></li>
+              <li><a href="index.html#contacto">Contacto</a></li>
+              <li><a href="tyc.html">Términos y Condiciones</a></li>
+              <li>
+                <a href="tyc.html#politicas-privacidad">Política de Privacidad</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            Desarrollado y diseñado por Stev Arte &copy; 2024. Todos los derechos
+            reservados.
+          </p>
+        </div>
+      </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currencySelector = document.getElementById("currency");
+        const prices = document.querySelectorAll(".price");
+
+        currencySelector.addEventListener("change", function () {
+          const currency = this.value;
+
+          prices.forEach((price) => {
+            const priceValue = price.getAttribute(`data-price-${currency}`);
+            price.textContent = `${currency.toUpperCase()} ${priceValue}`;
+          });
+        });
+      });
+
+      function contactViaWhatsApp(button) {
+        const service = button.getAttribute("data-service");
+        const whatsappUrl = `https://wa.me/message/BW2UDDVDHQ33J1?text=Hola,%20estoy%20interesado%20en%20el%20${service}`;
+        window.open(whatsappUrl, "_blank");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousels = document.querySelectorAll(".carrusel");
+
+        carousels.forEach((carrusel) => {
+          const prevButton = carrusel.querySelector(".prev");
+          const nextButton = carrusel.querySelector(".next");
+          const container = carrusel.querySelector(".carrusel-container");
+
+          let index = 0;
+
+          prevButton.addEventListener("click", () => {
+            index = Math.max(index - 1, 0);
+            container.style.transform = `translateX(-${index * 100}%)`;
+          });
+
+          nextButton.addEventListener("click", () => {
+            index = Math.min(index + 1, container.children.length - 1);
+            container.style.transform = `translateX(-${index * 100}%)`;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

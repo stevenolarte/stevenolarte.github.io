@@ -1,0 +1,2299 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffc107;
+  padding: 10px 20px;
+}
+
+.logo {
+  flex: 1;
+  max-width: 50px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.main-nav {
+  flex: 2;
+}
+
+.social-icons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-icon {
+  color: #000;
+  font-size: 24px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.main-nav nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-nav nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav nav ul li a {
+  display: block;
+  padding: 10px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.main-nav nav ul li a:hover {
+  transform: scale(1.1);
+}
+
+main {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+section {
+  padding: 5px;
+  flex: 1;
+}
+
+.menu-toggle {
+  display: none;
+  /* Ocultar el input inicialmente */
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  order: 1;
+  font-size: 24px;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .main-nav {
+    order: 2;
+  }
+
+  .main-nav nav ul {
+    flex-direction: column;
+    background-color: #ffbf00;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+    display: none;
+  }
+
+  .main-nav nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .main-nav nav ul li a {
+    color: #000;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+  }
+
+  .main-nav nav ul li a:hover {
+    background-color: #222;
+    color: #fff;
+  }
+
+  .social-icons {
+    order: 3;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+    margin: 0 5px;
+  }
+
+  .social-icon:hover {
+    color: #ffbf00;
+  }
+
+  .menu-toggle:checked~.main-nav nav ul {
+    display: flex;
+  }
+}
+
+/* Ocultar el menú en pantallas grandes */
+@media (min-width: 769px) {
+  .main-nav nav ul {
+    display: flex !important;
+  }
+}
+
+/* Estilos para el banner */
+#banner {
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+#banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #banner {
+    height: 20vh;
+    /* Ajustar la altura del banner en pantallas pequeñas */
+  }
+
+  #banner video {
+    height: auto;
+    /* Ajustar la altura automática para mantener la proporción */
+  }
+}
+
+/* Estilos para el popup */
+.popup {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px; /* Ajusta el ancho máximo */
+  max-height: 400px; /* Ajusta la altura máxima */
+  position: relative; /* Necesario para posicionar el botón de cierre */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px; /* Tamaño más pequeño para la "X" */
+  cursor: pointer;
+  color: #000;
+}
+
+.logo-container {
+  margin-bottom: 15px; /* Reduce el margen */
+}
+
+.logo-container {
+  width: 100px; /* Tamaño reducido del logo */
+  height: 50px;
+  border-radius: 20%; /* Hace que el logo sea redondo */
+  object-fit: cover;
+}
+
+#redirectBtn {
+  background-color: #ffbf00;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+#redirectBtn:hover {
+  background-color: #e0a800;
+}
+
+
+/* Contenedor principal */
+.services-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Asegura que la sección ocupe al menos la altura completa de la pantalla */
+}
+
+/* Título de la sección */
+.services-section h2 {
+  margin-bottom: 30px;
+  font-size: 2.5em; /* Tamaño de fuente para pantallas grandes */
+  position: relative;
+  color: #ffffff; /* Color blanco para el título */
+}
+
+/* Línea amarilla debajo del título */
+.services-section h2::after {
+  content: ""; /* Contenido vacío para la línea */
+  display: block; /* Mostrar como bloque para ocupar solo el ancho del texto */
+  border-bottom: 5px solid #e0a800; /* Línea amarilla debajo del título */
+  width: 150px; /* Ancho de la línea (ajustar según sea necesario) */
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: -10px; /* Ajuste para posicionar la línea debajo del texto */
+  left: 50%; /* Centrar horizontalmente la línea */
+  transform: translateX(-50%); /* Centrar la línea exactamente bajo el texto */
+}
+
+/* Descripción de la sección */
+.services-section p {
+  margin-bottom: 40px;
+  font-size: 1em; /* Tamaño de fuente para pantallas grandes */
+  color: #ccc;
+  max-width: 800px; /* Ancho máximo para pantallas grandes */
+  text-align: center; /* Centrar el texto */
+}
+
+/* Contenedor del carrusel */
+.carousel-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor del carrusel */
+.services-container-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px; /* Ancho máximo para centrar el carrusel */
+  width: 100%; /* Asegura que el contenedor del carrusel ocupe el 100% del ancho disponible */
+}
+
+/* Contenedor de servicios */
+.services-container {
+  display: flex;
+  padding-bottom: 20px;
+  width: 100%;
+  overflow-x: auto; /* Permitir desplazamiento horizontal */
+  -webkit-overflow-scrolling: touch; /* Activar desplazamiento suave en iOS */
+  max-width: 100%; /* Ajustar al 100% del contenedor */
+  scroll-snap-type: x mandatory; /* Alinear elementos en el desplazamiento */
+  scroll-snap-align: start; /* Asegurarse de que el carrusel inicie desde la posición cero */
+}
+
+/* Estilo de los botones de servicio */
+.service-item {
+  flex: 0 0 calc(33.333%); /* Mostrar tres elementos a la vez sin espacio entre ellos */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: transparent; /* Sin fondo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none; /* Eliminar borde */
+  padding: 0; /* Eliminar padding */
+  scroll-snap-align: start; /* Alinear elementos al inicio del contenedor */
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra atractiva */
+}
+
+/* Video del servicio */
+.service-item video {
+  width: 100%;
+  height: 200px; /* Altura fija para todos los videos */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover video {
+  transform: scale(1.1);
+}
+
+/* Overlay */
+.service-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Transparencia más clara */
+  opacity: 0; /* Ocultar el overlay por defecto */
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Texto del overlay */
+.service-item .overlay-text {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  opacity: 0; /* Ocultar el texto del overlay por defecto */
+  transition: opacity 0.3s ease;
+}
+/* Mostrar overlay y texto en pantallas pequeñas */
+@media (max-width: 768px) {
+  .service-item .overlay {
+    opacity: 1; /* Mostrar el overlay siempre */
+  }
+
+  .service-item .overlay-text {
+    opacity: 1; /* Mostrar el texto del overlay siempre */
+  }
+
+  .services-section h2 {
+    font-size: 25px; /* Tamaño de fuente ajustado */
+    text-align: center; /* Centrar el título */
+  }
+
+  .services-section p {
+    font-size: 14px; /* Tamaño de fuente ajustado */
+    max-width: 300px; /* Ancho máximo ajustado */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+  }
+
+  .services-section,
+  .services-container {
+    text-align: center; /* Centrar el contenido */
+  }
+
+  .service-item {
+    flex: 0 0 100%; /* Mostrar un elemento a la vez */
+    margin: 0 auto; /* Centrar el elemento */
+  }
+
+  /* Mensaje de deslizamiento */
+  .services-container::after {
+    content: '← Desliza para ver más →';
+    position: absolute;
+    bottom: -2px; /* Colocar el mensaje justo debajo del contenido */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ccc;
+    font-size: 14px;
+    display: block;
+    white-space: nowrap;
+    z-index: 5; /* Asegurar que esté sobre el fondo */
+  }
+}
+
+/* Mostrar overlay y texto al pasar el mouse en pantallas grandes */
+@media (min-width: 769px) {
+  .service-item:hover .overlay {
+    opacity: 1; /* Mostrar el overlay al pasar el mouse */
+  }
+
+  .service-item:hover .overlay-text {
+    opacity: 1; /* Mostrar el texto del overlay al pasar el mouse */
+  }
+}
+
+/* Mostrar tres elementos con espacio en pantallas grandes */
+@media (min-width: 1024px) {
+  .services-container {
+    justify-content: flex-start; /* Alinear el carrusel al inicio */
+  }
+
+  .service-item {
+    flex: 0 0 calc(33.333%); /* Mostrar tres elementos a la vez sin espacio entre ellos */
+  }
+}
+
+/* Botones de navegación */
+.services-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  display: none; /* Ocultar botones de navegación por defecto */
+}
+
+.services-button:hover {
+  background-color: rgba(255, 191, 0, 0.8); /* Color amarillo al pasar el mouse */
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}
+
+/* Mostrar botones de navegación en pantallas grandes */
+@media (min-width: 1024px) {
+  .services-button {
+    display: block;
+  }
+}
+
+/* Ocultar barras de desplazamiento */
+.services-container::-webkit-scrollbar {
+  display: none; /* Ocultar scrollbar en Webkit (Chrome, Safari) */
+}
+
+.services-container {
+  -ms-overflow-style: none; /* Ocultar scrollbar en IE y Edge */
+  scrollbar-width: none; /* Ocultar scrollbar en Firefox */
+}
+
+
+
+/* Estilos para #servicio1 */
+#servicio1 {
+  display: block;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Mostrar el servicio1 activo */
+#servicio1.active {
+  display: block;
+}
+
+/* Estilos para el texto de la descripción del servicio */
+#servicio1 .service-description-text {
+  max-width: 900px; /* Ajustado a 900px como se solicitó */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* Centrar el texto */
+}
+
+#servicio1 .service-description-text h2 {
+  color: #ffc107;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#servicio1 .service-description-text p {
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para el selector de divisa */
+#servicio1 .currency-selector {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#servicio1 .currency-selector label {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+#servicio1 .currency-selector select {
+  padding: 8px;
+  font-size: 1em;
+}
+
+/* Estilos para el carrusel en servicio1 */
+#servicio1 .carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+#servicio1 .carrusel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+#servicio1 .carrusel-item {
+  flex: 0 0 calc(33.33% - 20px); /* Mostrar 3 elementos por vez */
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  width: var(--item-width, 100%);
+  height: var(--item-height, auto);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servicio1 .carrusel-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#servicio1 .carrusel-item h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #ffc107;
+}
+
+#servicio1 .carrusel-item p {
+  margin-bottom: 10px;
+  max-width: 800px;
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center; /* Centrar el texto */
+}
+
+#servicio1 .carrusel-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#servicio1 .carrusel-item ul li {
+  margin-bottom: 5px;
+}
+
+#servicio1 .carrusel-item .price {
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+#servicio1 .carrusel-item .contact-button {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#servicio1 .carrusel-item .contact-button:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* Botones de navegación del carrusel */
+#servicio1 .carrusel-button {
+  position: fixed; /* Fijar los botones en la pantalla */
+  top: 50%; /* Posición vertical a media altura */
+  transform: translateY(-50%); /* Ajustar la posición vertical para centrarlos */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#servicio1 .carrusel-button.prev {
+  left: 10px; /* Posición del botón 'anterior' desde la izquierda */
+}
+
+#servicio1 .carrusel-button.next {
+  right: 10px; /* Posición del botón 'siguiente' desde la derecha */
+}
+
+#servicio1 .carrusel-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Mostrar botones de carrusel al pasar sobre el carrusel */
+#servicio1 .carrusel:hover .carrusel-button {
+  opacity: 1;
+}
+
+/* Estilos de media queries para responsive design */
+@media (max-width: 1200px) {
+  #servicio1 .carrusel-item {
+    flex: 0 0 calc(50% - 20px); /* Mostrar 2 elementos por vez */
+  }
+}
+
+@media (max-width: 768px) {
+  #servicio1 .carrusel-item {
+    flex: 0 0 calc(100% - 20px); /* Mostrar 1 elemento por vez */
+  }
+
+  #servicio1 .carrusel-button {
+    display: none; /* Ocultar botones en pantallas pequeñas */
+  }
+
+  #servicio1 .carrusel-container {
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Mejorar el desplazamiento táctil en iOS */
+    scroll-snap-type: x mandatory; /* Definir el tipo de desplazamiento */
+    -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en IE y Edge */
+    scrollbar-width: none; /* Ocultar la barra de desplazamiento en Firefox */
+  }
+
+  #servicio1 .carrusel-item {
+    scroll-snap-align: start; /* Alinear cada elemento del carrusel al inicio */
+  }
+
+  /* Añade el estilo de desplazamiento táctil al contenedor del carrusel */
+  #servicio1 .carrusel-container::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en WebKit */
+  }
+}
+
+@media (max-width: 480px) {
+  #servicio1 .carrusel-item {
+    flex: 0 0 calc(100% - 20px); /* Mostrar 1 elemento por vez */
+  }
+
+  #servicio1 .carrusel-item h2 {
+    font-size: 1.6em; /* Reducción del tamaño de fuente para pantallas más pequeñas */
+  }
+
+  #servicio1 .carrusel-item p {
+    font-size: 0.8em; /* Reducción del tamaño de fuente para pantallas más pequeñas */
+  }
+}
+/* Estilos para #servicio2 */
+#servicio2 {
+  display: block;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Mostrar el servicio2 activo */
+#servicio2.active {
+  display: block;
+}
+
+/* Estilos para el texto de la descripción del servicio */
+#servicio2 .service-description-text {
+  max-width: 800px; /* Ajustado a 900px como se solicitó */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* Centrar el texto */
+}
+
+#servicio2 .service-description-text h2 {
+  color: #ffc107;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#servicio2 .service-description-text p {
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para el selector de divisa */
+#servicio2 .currency-selector {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#servicio2 .currency-selector label {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+#servicio2 .currency-selector select {
+  padding: 8px;
+  font-size: 1em;
+}
+
+/* Estilos para el carrusel en servicio2 */
+#servicio2 .carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+#servicio2 .carrusel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+#servicio2 .carrusel-item {
+  flex: 0 0 calc(33.33% - 20px); /* Mostrar 3 elementos por vez */
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  width: var(--item-width, 100%);
+  height: var(--item-height, auto);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servicio2 .carrusel-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#servicio2 .carrusel-item h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #ffc107;
+}
+
+#servicio2 .carrusel-item p {
+  margin-bottom: 10px;
+  max-width: 800px;
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center; /* Centrar el texto */
+}
+
+#servicio2 .carrusel-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#servicio2 .carrusel-item ul li {
+  margin-bottom: 5px;
+}
+
+#servicio2 .carrusel-item .price {
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+#servicio2 .carrusel-item .contact-button {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#servicio2 .carrusel-item .contact-button:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* Botones de navegación del carrusel */
+#servicio2 .carrusel-button {
+  position: fixed; /* Fijar los botones en la pantalla */
+  top: 50%; /* Posición vertical a media altura */
+  transform: translateY(-50%); /* Ajustar la posición vertical para centrarlos */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#servicio2 .carrusel-button.prev {
+  left: 10px; /* Posición del botón 'anterior' desde la izquierda */
+}
+
+#servicio2 .carrusel-button.next {
+  right: 10px; /* Posición del botón 'siguiente' desde la derecha */
+}
+
+#servicio2 .carrusel-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Mostrar botones de carrusel al pasar sobre el carrusel */
+#servicio2 .carrusel:hover .carrusel-button {
+  opacity: 1;
+}
+
+/* Estilos de media queries para responsive design */
+@media (max-width: 1200px) {
+  #servicio2 .carrusel-item {
+    flex: 0 0 calc(50% - 20px); /* Mostrar 2 elementos por vez */
+  }
+}
+
+@media (max-width: 768px) {
+  #servicio2 .carrusel-item {
+    flex: 0 0 calc(100% - 20px); /* Mostrar 1 elemento por vez */
+  }
+
+  #servicio2 .carrusel-button {
+    display: none; /* Ocultar botones en pantallas pequeñas */
+  }
+
+  #servicio2 .carrusel-container {
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Mejorar el desplazamiento táctil en iOS */
+    scroll-snap-type: x mandatory; /* Definir el tipo de desplazamiento */
+    -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en IE y Edge */
+    scrollbar-width: none; /* Ocultar la barra de desplazamiento en Firefox */
+  }
+
+  #servicio2 .carrusel-item {
+    scroll-snap-align: start; /* Alinear cada elemento del carrusel al inicio */
+  }
+
+  /* Añade el estilo de desplazamiento táctil al contenedor del carrusel */
+  #servicio2 .carrusel-container::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en WebKit */
+  }
+}
+
+@media (max-width: 480px) {
+  #servicio2 .carrusel-item {
+    flex: 0 0 calc(100% - 20px); /* Mostrar 1 elemento por vez */
+  }
+
+  #servicio2 .carrusel-item h2 {
+    font-size: 1.6em; /* Reducción del tamaño de fuente para pantallas más pequeñas */
+  }
+
+  #servicio2 .carrusel-item p {
+    font-size: 0.8em; /* Reducción del tamaño de fuente para pantallas más pequeñas */
+  }
+}
+
+/* Estilos para #servicio3 */
+#servicio3 {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Mostrar el servicio3 activo */
+#servicio3.active {
+  display: block;
+}
+
+/* Estilos para el texto de la descripción del servicio */
+#servicio3 .service-description-text {
+  max-width: 900px; /* Ajustado a 900px como se solicitó */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* Centrar el texto */
+}
+
+#servicio3 .service-description-text h2 {
+  color: #ffc107;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#servicio3 .service-description-text p {
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para el selector de divisa */
+#servicio3 .currency-selector {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#servicio3 .currency-selector label {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+#servicio3 .currency-selector select {
+  padding: 8px;
+  font-size: 1em;
+}
+
+/* Estilos para el carrusel en servicio3 */
+#servicio3 .carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+#servicio3 .carrusel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Ajuste de elementos del carrusel */
+#servicio3 .carrusel-item {
+  flex: 0 0 calc(33.33% - 20px); /* Mostrar 3 elementos por vez */
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servicio3 .carrusel-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#servicio3 .carrusel-item h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #ffc107;
+}
+
+#servicio3 .carrusel-item p {
+  margin-bottom: 10px;
+  max-width: 800px;
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center; /* Centrar el texto */
+}
+
+#servicio3 .carrusel-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#servicio3 .carrusel-item ul li {
+  margin-bottom: 5px;
+}
+
+#servicio3 .carrusel-item .price {
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+#servicio3 .carrusel-item .contact-button {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#servicio3 .carrusel-item .contact-button:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* Botones de navegación del carrusel */
+#servicio3 .carrusel-button {
+  position: fixed; /* Fijar los botones en la pantalla */
+  top: 50%; /* Posición vertical a media altura */
+  transform: translateY(-50%); /* Ajustar la posición vertical para centrarlos */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#servicio3 .carrusel-button.prev {
+  left: 10px; /* Posición del botón 'anterior' desde la izquierda */
+}
+
+#servicio3 .carrusel-button.next {
+  right: 10px; /* Posición del botón 'siguiente' desde la derecha */
+}
+
+#servicio3 .carrusel-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Mostrar botones de carrusel al pasar sobre el carrusel */
+#servicio3 .carrusel:hover .carrusel-button {
+  opacity: 1;
+}
+
+/* Estilos de media queries para responsive design */
+@media (max-width: 1200px) {
+  #servicio3 .carrusel-item {
+    flex: 0 0 calc(50% - 20px); /* Mostrar 2 elementos por vez */
+  }
+}
+
+@media (max-width: 768px) {
+  #servicio3 .carrusel-item {
+    flex: 0 0 calc(100% - 20px); /* Mostrar 1 elemento por vez */
+  }
+
+  #servicio3 .carrusel-button {
+    display: none; /* Ocultar botones en pantallas pequeñas */
+  }
+
+  #servicio3 .carrusel-container {
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Mejorar el desplazamiento táctil en iOS */
+    scroll-snap-type: x mandatory; /* Definir el tipo de desplazamiento */
+    -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en IE y Edge */
+    scrollbar-width: none; /* Ocultar la barra de desplazamiento en Firefox */
+  }
+
+  #servicio3 .carrusel-item {
+    scroll-snap-align: start; /* Alinear cada elemento del carrusel al inicio */
+  }
+
+  /* Añade el estilo de desplazamiento táctil al contenedor del carrusel */
+  #servicio3 .carrusel-container::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en WebKit */
+  }
+}
+
+@media (max-width: 480px) {
+  #servicio3 .carrusel-item {
+    flex: 0 0 calc(100% - 20px); /* Mostrar 1 elemento por vez */
+  }
+
+  #servicio3 .carrusel-item h4 {
+    font-size: 1.6em; /* Reducción del tamaño de fuente para pantallas más pequeñas */
+  }
+
+  #servicio3 .carrusel-item p {
+    font-size: 0.8em; /* Reducción del tamaño de fuente para pantallas más pequeñas */
+  }
+
+  /* Reducción del espacio entre el contenido y el borde superior en pantallas pequeñas */
+  #servicio3 .carrusel {
+    padding: 10px 0; /* Ajustar el padding para reducir el espacio superior */
+  }
+
+  #servicio3 .service-description-text {
+    padding-top: 10px; /* Reducir el padding superior del texto descriptivo */
+  }
+}
+
+/* Estilos generales para la sección de productos */
+#custom-section {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0;
+  box-sizing: border-box; 
+} 
+
+#custom-section .product-section {
+  padding: 20px 0;
+  width: 100%;
+}
+
+#custom-section .product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+#custom-section .product-info h2 {
+  font-size: 3em;
+}
+
+#custom-section .product-info p {
+  font-size: 2.5em;
+  text-align: center; /* Centra el texto en pantallas pequeñas */
+}
+
+@media (min-width: 768px) {
+  #custom-section .product-info {
+    flex-direction: row;
+    flex-wrap: wrap; /* Asegura que los elementos no se salgan del contenedor */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+  }
+
+  #custom-section .product-info .image-container,
+  #custom-section .product-info .product-description {
+    flex: 1 1 45%; /* Ajusta el ancho de los elementos para que se intercalen */
+    margin: 10px; /* Espacio entre los elementos */
+  }
+
+  #custom-section .product-info p {
+    text-align: center; /* Alinea el texto a la izquierda en pantallas grandes */
+  }
+
+  #custom-section .image-container img {
+    width: 100%; /* Ajusta el tamaño de las imágenes para adaptarse al contenedor */
+  }
+}
+
+#custom-section .image-container {
+  flex: 1;
+  width: auto;
+}
+
+#custom-section .image-container img {
+  width: 80%; /* Ajusta el tamaño de las imágenes en pantallas pequeñas */
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: 0 auto; /* Centra las imágenes horizontalmente */
+  transition: transform 0.3s ease-out;
+}
+
+#custom-section .image-zoom {
+  transform: scale(1.1);
+}
+
+#custom-section .product-description {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  #custom-section .product-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+#custom-section .product-description p {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.2em; /* Tamaño del texto ajustado para pantallas pequeñas */
+  line-height: 1.6;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 100%; /* Ajusta el ancho máximo del párrafo */
+  margin: 0 auto; /* Centra el párrafo horizontalmente */
+}
+
+#custom-section .contact-button {
+  display: inline-block;
+  padding: 12px 20px; /* Ajusta el padding del botón */
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px; /* Agrega espacio arriba del botón */
+}
+
+#custom-section .contact-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos específicos para intercalar la imagen y el texto */
+@media (min-width: 768px) {
+  #custom-section #gorras .product-info,
+  #custom-section #camisetas-hoodies .product-info,
+  #custom-section #mugs .product-info {
+    flex-direction: row;
+  }
+
+  #custom-section #manillas.reverse .product-info,
+  #custom-section #camisetas.reverse .product-info,
+  #custom-section #bolsas.reverse .product-info {
+    flex-direction: row-reverse;
+  }
+
+  #custom-section #gorras .product-description,
+  #custom-section #camisetas-hoodies .product-description,
+  #custom-section #mugs .product-description {
+    order: 2; /* Cambia el orden de la descripción */
+  }
+
+  #custom-section #gorras .image-container,
+  #custom-section #camisetas-hoodies .image-container,
+  #custom-section #mugs .image-container {
+    order: 1; /* Cambia el orden de la imagen */
+  }
+
+  #custom-section #manillas.reverse .product-description,
+  #custom-section #camisetas.reverse .product-description,
+  #custom-section #bolsas.reverse .product-description {
+    text-align: right; /* Alinea el texto a la derecha para las secciones especificadas */
+    align-items: flex-end; /* Alinea el texto al final en pantallas grandes */
+  }
+
+  #custom-section #manillas.reverse .image-container,
+  #custom-section #camisetas.reverse .image-container,
+  #custom-section #bolsas.reverse .image-container {
+    text-align: left; /* Alinea la imagen a la izquierda para las secciones especificadas */
+    align-items: flex-start; /* Alinea la imagen al principio en pantallas grandes */
+  }
+}
+
+@media (max-width: 767px) {
+  /* Ajuste para pantallas pequeñas */
+  #custom-section .product-info.reverse .product-description,
+  #custom-section .product-info:not(.reverse) .product-description {
+    order: 2; /* Cambia el orden del texto */
+    padding: 0 10px; /* Ajusta el padding lateral */
+  }
+
+  #custom-section .image-container {
+    order: 1; /* Cambia el orden de la imagen */
+  }
+
+  #custom-section .contact-button {
+    order: 3; /* Cambia el orden del botón */
+  }
+
+  #custom-section .product-description {
+    padding: 0 20px; /* Ajusta el padding lateral en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #custom-section .product-info h2 {
+    font-size: 25px; /* Tamaño del texto del título para pantallas pequeñas */
+  }
+
+  #custom-section .product-info p {
+    font-size: 14px; /* Tamaño del texto del párrafo para pantallas pequeñas */
+    max-width: 300px; /* Ancho máximo del párrafo */
+    margin: 0 auto; /* Centra el párrafo horizontalmente */
+  }
+}
+
+/* Estilos para #servicio5 */
+#servicio5 {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Mostrar el servicio5 activo */
+#servicio5.active {
+  display: block;
+}
+
+/* Estilos para el texto de la descripción del servicio */
+#servicio5 .service-description-text {
+  max-width: 900px; /* Ajustado a 900px como en #servicio3 */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* Centrar el texto */
+}
+
+#servicio5 .service-description-text h2 {
+  color: #ffc107;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#servicio5 .service-description-text p {
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para el selector de divisa */
+#servicio5 .currency-selector {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#servicio5 .currency-selector label {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+#servicio5 .currency-selector select {
+  padding: 8px;
+  font-size: 1em;
+}
+
+/* Estilos para el carrusel en servicio5 */
+#servicio5 .carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+#servicio5 .carrusel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+#servicio5 .carrusel-item {
+  flex: 0 0 calc(33.33% - 20px); /* Mostrar 3 elementos por vez en pantallas grandes */
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servicio5 .carrusel-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#servicio5 .carrusel-item h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #ffc107;
+}
+
+#servicio5 .carrusel-item p {
+  margin-bottom: 10px;
+  max-width: 800px; /* Ajustado a 800px para pantallas grandes */
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center; /* Centrar el texto */
+}
+
+#servicio5 .carrusel-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#servicio5 .carrusel-item ul li {
+  margin-bottom: 5px;
+}
+
+#servicio5 .carrusel-item .price {
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+#servicio5 .carrusel-item .contact-button {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#servicio5 .carrusel-item .contact-button:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* Botones de navegación del carrusel */
+#servicio5 .carrusel-button {
+  position: fixed; /* Fijar los botones en la pantalla */
+  top: 50%; /* Posición vertical a media altura */
+  transform: translateY(-50%); /* Ajustar la posición vertical para centrarlos */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#servicio5 .carrusel-button.prev {
+  left: 10px; /* Posición del botón 'anterior' desde la izquierda */
+}
+
+#servicio5 .carrusel-button.next {
+  right: 10px; /* Posición del botón 'siguiente' desde la derecha */
+}
+
+#servicio5 .carrusel-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Mostrar botones de carrusel al pasar sobre el carrusel */
+#servicio5 .carrusel:hover .carrusel-button {
+  opacity: 1;
+}
+
+/* Estilos de media queries para responsive design */
+@media (max-width: 1200px) {
+  #servicio5 .carrusel-item {
+    flex: 0 0 calc(50% - 20px); /* Mostrar 2 elementos por vez */
+  }
+}
+
+@media (max-width: 768px) {
+  #servicio5 .carrusel-item {
+    flex: 0 0 calc(100% - 20px); /* Mostrar 1 elemento por vez */
+  }
+  
+  #servicio5 .carrusel-button {
+    display: none; /* Ocultar botones en pantallas pequeñas */
+  }
+  
+  #servicio5 .carrusel-container {
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Mejorar el desplazamiento táctil en iOS */
+    scroll-snap-type: x mandatory; /* Definir el tipo de desplazamiento */
+    -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en IE y Edge */
+    scrollbar-width: none; /* Ocultar la barra de desplazamiento en Firefox */
+  }
+  
+  #servicio5 .carrusel-item {
+    scroll-snap-align: start; /* Alinear cada elemento del carrusel al inicio */
+  }
+  
+  /* Añade el estilo de desplazamiento táctil al contenedor del carrusel */
+  #servicio5 .carrusel-container::-webkit-scrollbar {
+    display: none; /* Ocultar la barra de desplazamiento en WebKit */
+  }
+  
+  /* Ajustes para textos en pantallas pequeñas */
+  #servicio5 .service-description-text h2 {
+    font-size: 25px;
+  }
+  
+  #servicio5 .service-description-text p {
+    font-size: 14px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  #servicio5 .carrusel-item {
+    flex: 0 0 calc(100% - 20px); /* Mostrar 1 elemento por vez */
+  }
+  
+  #servicio5 .carrusel-item h2 {
+    font-size: 1.6em; /* Reducción del tamaño de fuente para pantallas más pequeñas */
+  }
+  
+  #servicio5 .carrusel-item p {
+    font-size: 0.8em; /* Reducción del tamaño de fuente para pantallas más pequeñas */
+  }
+  
+  /* Reducción del espacio entre el contenido y el borde superior en pantallas pequeñas */
+  #servicio5 .carrusel {
+    padding: 10px 0; /* Ajustar el padding para reducir el espacio superior */
+  }
+  
+  #servicio5 .service-description-text {
+    padding-top: 10px; /* Reducir el padding superior del texto descriptivo */
+  }
+}
+
+/* Estilos para #servicio6 */
+#servicio6 {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Mostrar el servicio6 activo */
+#servicio6.active {
+  display: block;
+}
+
+/* Estilos para el texto de la descripción del servicio */
+#servicio6 .service-description-text {
+  max-width: 900px; /* Ajustado a 900px como en #servicio5 */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* Centrar el texto */
+}
+
+#servicio6 .service-description-text h2 {
+  color: #ffc107;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#servicio6 .service-description-text p {
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para el selector de divisa */
+#servicio6 .currency-selector {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#servicio6 .currency-selector label {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+#servicio6 .currency-selector select {
+  padding: 8px;
+  font-size: 1em;
+}
+
+/* Estilos para el carrusel en servicio6 */
+#servicio6 .carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+#servicio6 .carrusel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+#servicio6 .carrusel-item {
+  flex: 0 0 calc(33.33% - 20px); /* Mostrar 3 elementos por vez en pantallas grandes */
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servicio6 .carrusel-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#servicio6 .carrusel-item h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #ffc107;
+}
+
+#servicio6 .carrusel-item p {
+  margin-bottom: 10px;
+  max-width: 800px; /* Ajustado a 800px para pantallas grandes */
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center; /* Centrar el texto */
+}
+
+#servicio6 .carrusel-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#servicio6 .carrusel-item ul li {
+  margin-bottom: 5px;
+}
+
+#servicio6 .carrusel-item .price {
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+#servicio6 .carrusel-item .contact-button {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#servicio6 .carrusel-item .contact-button:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* Botones de navegación del carrusel */
+#servicio6 .carrusel-button {
+  position: fixed; /* Fijar los botones en la pantalla */
+  top: 50%; /* Posición vertical a media altura */
+  transform: translateY(-50%); /* Ajustar la posición vertical para centrarlos */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#servicio6 .carrusel-button.prev {
+  left: 10px; /* Posición del botón 'anterior' desde la izquierda */
+}
+
+#servicio6 .carrusel-button.next {
+  right: 10px; /* Posición del botón 'siguiente' desde la derecha */
+}
+
+#servicio6 .carrusel-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Mostrar botones de carrusel al pasar sobre el carrusel */
+#servicio6 .carrusel:hover .carrusel-button {
+  opacity: 1;
+}
+
+/* Estilos de media queries para responsive design */
+@media (max-width: 1200px) {
+  #servicio6 .carrusel-item {
+    flex: 0 0 calc(50% - 20px); /* Mostrar 2 elementos por vez */
+  }
+}
+
+@media (max-width: 768px) {
+  #servicio6 .carrusel-item {
+    flex: 0 0 calc(100% - 20px); /* Mostrar 1 elemento por vez */
+  }
+  
+  #servicio6 .carrusel-button {
+    display: none; /* Ocultar botones en pantallas pequeñas */
+  }
+  
+  #servicio6 .carrusel-container {
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Mejorar el desplazamiento táctil en iOS */
+    scroll-snap-type: x mandatory; /* Definir el tipo de desplazamiento */
+    -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en IE y Edge */
+    scrollbar-width: none; /* Ocultar la barra de desplazamiento en Firefox */
+  }
+  
+  #servicio6 .carrusel-item {
+    scroll-snap-align: start; /* Alinear cada elemento del carrusel al inicio */
+  }
+  
+  /* Añade el estilo de desplazamiento táctil al contenedor del carrusel */
+  #servicio6 .carrusel-container::-webkit-scrollbar {
+    display: none; /* Ocultar la barra de desplazamiento en WebKit */
+  }
+  
+  /* Ajustes para textos en pantallas pequeñas */
+  #servicio6 .service-description-text h2 {
+    font-size: 25px;
+  }
+  
+  #servicio6 .service-description-text p {
+    font-size: 14px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  #servicio6 .carrusel-item {
+    flex: 0 0 calc(100% - 20px); /* Mostrar 1 elemento por vez */
+  }
+  
+  #servicio6 .carrusel-item h2 {
+    font-size: 1.6em; /* Reducción del tamaño de fuente para pantallas más pequeñas */
+  }
+  
+  #servicio6 .carrusel-item p {
+    font-size: 0.8em; /* Reducción del tamaño de fuente para pantallas más pequeñas */
+  }
+  
+  /* Reducción del espacio entre el contenido y el borde superior en pantallas pequeñas */
+  #servicio6 .carrusel {
+    padding: 10px 0; /* Ajustar el padding para reducir el espacio superior */
+  }
+  
+  #servicio6 .service-description-text {
+    padding-top: 10px; /* Reducir el padding superior del texto descriptivo */
+  }
+}
+
+/* Sección Portafolio */
+.portafolio-section {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  min-height: 100vh;
+  overflow: hidden; /* Asegura que no haya desbordamiento */
+}
+
+/* Título de la sección Portafolio */
+.portafolio-section h2 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Línea amarilla debajo del título de la sección Portafolio */
+.portafolio-section h2::after {
+  content: "";
+  display: block;
+  border-bottom: 5px solid #e0a800;
+  width: 150px;
+  position: relative;
+  margin: 10px auto 0;
+}
+
+/* Descripción de la sección Portafolio */
+.portafolio-section p {
+  font-size: 1em;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .portafolio-section h2 {
+    font-size: 25px;
+  }
+
+  .portafolio-section p {
+    font-size: 14px;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+}
+
+/* Estilo general de la sección de gestión de redes sociales */
+.gestion-redes {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Estilo del contenedor del carrusel */
+.carousel-gestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+}
+
+/* Estilo de los elementos del carrusel */
+.carousel-item {
+  flex: 0 0 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  margin: 10px auto; /* Centrar los elementos con margen */
+}
+
+/* Contenedor de imágenes dentro del carrusel */
+.carousel-img-wrapper {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo de las imágenes */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Estilo de los botones de navegación */
+.gestion-prev-button, .gestion-next-button {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 2em;
+}
+
+/* Botón anterior */
+.gestion-prev-button {
+  left: 10px;
+}
+
+/* Botón siguiente */
+.gestion-next-button {
+  right: 10px;
+}
+
+/* Mostrar botones de navegación en pantallas grandes */
+@media (min-width: 1024px) {
+  .gestion-prev-button, .gestion-next-button {
+    display: block;
+  }
+}
+
+/* Estilo general de la sección de Publicidad Digital */
+.servicio-item {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Asegura que no haya desbordamiento */
+}
+
+/* Estilo del contenedor del carrusel */
+.carousel-digital {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Asegura que no haya desbordamiento visible */
+  scroll-behavior: smooth;
+}
+
+/* Estilo de los elementos del carrusel */
+.digital-item {
+  flex: 0 0 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  margin: 10px auto; /* Centrar los elementos con margen */
+}
+
+/* Contenedor de imágenes dentro del carrusel */
+.carousel-img-wrapper {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo de las imágenes */
+.digital-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Estilo de los botones de navegación */
+.digital-prev-button, .digital-next-button {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 2em;
+}
+
+/* Botón anterior */
+.digital-prev-button {
+  left: 10px;
+}
+
+/* Botón siguiente */
+.digital-next-button {
+  right: 10px;
+}
+
+/* Configuración para pantallas pequeñas */
+@media (max-width: 767px) {
+  /* Ocultar botones de navegación en pantallas pequeñas */
+  .gestion-prev-button, .gestion-next-button,
+  .digital-prev-button, .digital-next-button {
+    display: none;
+  }
+
+  /* Ajustar el estilo del carrusel para pantallas pequeñas */
+  .carousel-gestion, .carousel-digital {
+    overflow: hidden; /* Ocultar el desbordamiento visible */
+    scroll-behavior: smooth;
+  }
+
+  .carousel-item, .digital-item {
+    flex: 0 0 100%;
+    margin: 10px auto; /* Centrar los elementos con margen */
+    position: relative;
+  }
+
+  .carousel-item img, .digital-item img {
+    width: 100%;
+    max-width: 300px; /* Ajustar el tamaño de las imágenes */
+    margin: 0 auto;
+  }
+
+  /* Letrero de deslizamiento */
+  .carousel-gestion::after,
+  .carousel-digital::after {
+    content: '← Desliza para ver más →';
+    position: absolute;
+    bottom: -20px; /* Colocar debajo del contenido */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 14px;
+    display: block;
+    white-space: nowrap;
+    z-index: 5; /* Asegurar que esté sobre el fondo */
+  }
+}
+/* Estilos para #paquete1 */
+#paquete1 {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Mostrar el servicio activo */
+#paquete1.active {
+  display: block;
+}
+
+/* Estilos para el texto de la descripción del servicio */
+#paquete1 .service-description-text {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#paquete1 .service-description-text h2 {
+  color: #ffc107;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#paquete1 .service-description-text p {
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Estilos para el selector de divisa */
+#paquete1 .currency-selector {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#paquete1 .currency-selector label {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+#paquete1 .currency-selector select {
+  padding: 8px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Estilos para el carrusel en paquete1 */
+#paquete1 .carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+#paquete1 .carrusel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+#paquete1 .carrusel-item {
+  flex: 0 0 calc(33.33% - 20px); /* Mostrar 3 elementos por vez */
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  width: var(--item-width, 100%);
+  height: var(--item-height, auto);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#paquete1 .carrusel-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#paquete1 .carrusel-item h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #ffc107;
+}
+
+#paquete1 .carrusel-item p {
+  margin-bottom: 10px;
+  max-width: 800px;
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+#paquete1 .carrusel-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#paquete1 .carrusel-item ul li {
+  margin-bottom: 5px;
+}
+
+#paquete1 .carrusel-item .price {
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+#paquete1 .carrusel-item .contact-button {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#paquete1 .carrusel-item .contact-button:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* Botones de navegación del carrusel */
+#paquete1 .carrusel-button {
+  position: fixed; /* Fijar los botones en la pantalla */
+  top: 50%; /* Posición vertical a media altura */
+  transform: translateY(-50%); /* Ajustar la posición vertical para centrarlos */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#paquete1 .carrusel-button.prev {
+  left: 10px; /* Posición del botón 'anterior' desde la izquierda */
+}
+
+#paquete1 .carrusel-button.next {
+  right: 10px; /* Posición del botón 'siguiente' desde la derecha */
+}
+
+#paquete1 .carrusel:hover .carrusel-button {
+  opacity: 1; /* Mostrar los botones al pasar el ratón sobre el carrusel */
+}
+
+/* Estilos generales del footer */
+footer {
+  background-color: #ffc107;
+  padding: 20px 0;
+  color: #000000;
+  font-size: 15px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-container > div {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+/* Estilos para la sección de Contacto */
+.footer-contact {
+  text-align: left;
+}
+
+.footer-contact h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000000;
+}
+
+/* Estilos para la sección de Redes Sociales */
+.footer-social {
+  text-align: left;
+}
+
+.footer-social h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000000;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links a {
+  color: #000000;
+  font-size: 35px;
+}
+
+/* Estilos para la sección de Enlaces Útiles */
+.footer-links {
+  text-align: left;
+}
+
+.footer-links h2 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  color: #000000;
+}
+
+/* Estilos para el footer inferior */
+.footer-bottom {
+  margin-top: 15px;
+  background-color: #000000;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
